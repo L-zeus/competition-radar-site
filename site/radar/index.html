@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="g151-public-20261014-e96e5cf1067a" name="radar-run-id"/>
+<meta content="PUBLIC_NO_PROFILE" name="radar-profile-mode"/>
+<meta content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'" http-equiv="Content-Security-Policy"/>
+<meta content="light" name="color-scheme"/>
+<title>浏览赛事目录 · Competition Radar</title>
+<link href="/competition-radar-site/static/radar.css" rel="stylesheet"/>
+<link href="/competition-radar-site/static/discovery.css" rel="stylesheet"/>
+<script defer="" src="/competition-radar-site/static/radar.js"></script>
+<script defer="" src="/competition-radar-site/static/discovery.js"></script> <link href="/competition-radar-site/static/public-design.css" rel="stylesheet"/>
+<link href="https://L-zeus.github.io/competition-radar-site/radar/index.html" rel="canonical"/></head>
+<body class="public-site" data-ux-polish="">
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="site-header">
+<div class="header-inner">
+<a aria-label="赛事雷达首页" class="brand" href="/competition-radar-site/index.html">
+<span aria-hidden="true" class="brand-mark">CR</span>
+<span class="brand-type"><strong>赛事雷达</strong><small>Competition Radar</small></span>
+</a>
+<nav aria-label="主导航" class="primary-nav">
+<a aria-current="page" href="/competition-radar-site/radar/index.html">探索比赛</a>
+<a href="/competition-radar-site/decision/index.html">为我推荐</a> <a href="/competition-radar-site/eligibility/index.html">我的资格</a>
+<a href="/competition-radar-site/campus/index.html">学校参与</a> <a href="/competition-radar-site/actions/index.html">下一步行动</a>
+</nav>
+</div>
+</header>
+<main class="page-shell" id="main">
+<div class="page-heading discovery-page-heading">
+<div>
+<h1>浏览赛事目录</h1>
+<p class="page-summary">从比赛任务开始筛选，再核对日期、参赛条件与官方路径。</p>
+</div>
+</div>
+<section aria-label="赛事搜索和筛选" class="discovery-filter-panel directory-search-panel" data-discovery-feed="">
+<div class="discovery-filter-toolbar">
+<label class="discovery-search">搜索赛事、任务或技术方向
+      <input autocomplete="off" data-discovery-search="" data-search="" placeholder="例如：JUnit、团队编程、芯片" type="search"/>
+</label>
+<label class="filter-field">方向
+      <select data-discovery-tag-select=""><option value="">全部方向</option><option value="编程与算法">编程与算法</option><option value="AI 与机器学习">AI 与机器学习</option><option value="软件开发">软件开发</option><option value="计算机系统">计算机系统</option><option value="网络与安全">网络与安全</option><option value="创新创业">创新创业</option><option value="数字媒体">数字媒体</option><option value="其他">其他</option></select>
+</label>
+<label class="filter-field">排序
+      <select data-discovery-sort="">
+<option value="relevance">相关与可报名优先</option>
+<option value="date">官方日期较近</option>
+<option value="name">赛事名称</option>
+</select>
+</label>
+<button class="quiet-button discovery-clear" data-discovery-clear="" type="button">清除筛选</button>
+</div>
+<details class="directory-more-filters"><summary>更多筛选：赛期、报名状态与参赛形式</summary><div class="directory-secondary-filters"> <label class="filter-field">赛期
+      <select data-discovery-cycle-filter="">
+<option value="">全部赛期</option>
+<option value="current">本届 / 当前赛季</option>
+<option value="upcoming">未来周期</option>
+<option value="unknown">赛期待核实</option>
+<option value="historical">历史届次</option>
+</select>
+</label>
+<label class="filter-field">报名状态
+      <select data-discovery-registration-filter="">
+<option value="">全部状态</option>
+<option value="open">已公布报名日期</option>
+<option value="closed">报名已截止</option>
+<option value="unknown">报名日期暂缺</option>
+</select>
+</label>
+<label class="filter-field">记录来源
+      <select data-discovery-verification-filter="">
+<option value="">全部记录</option>
+<option value="g6">赛事目录记录</option>
+<option value="discovery">官方补充赛事</option>
+<option value="lead">待核验线索</option>
+</select>
+</label>
+<label class="filter-field">参赛形式
+      <select data-discovery-format-filter="">
+<option value="">全部形式</option>
+<option value="individual">个人</option>
+<option value="team">团队</option>
+<option value="mixed">个人 / 团队</option>
+<option value="unknown">待核实</option>
+</select>
+</label>
+<label class="filter-field">成果类型
+      <select data-discovery-submission-filter="">
+<option value="">全部类型</option>
+<option value="programming">程序解题</option>
+<option value="software">软件 / 测试</option>
+<option value="project">项目 / 作品</option>
+<option value="unknown">待核实</option>
+</select>
+</label>
+</div></details>
+<div class="discovery-results-heading"><p aria-live="polite" class="result-count" data-discovery-count="">显示 46 / 46 场</p></div>
+<p class="empty-state discovery-empty" data-discovery-empty="" hidden="">没有找到匹配赛事。清除筛选即可重新查看全部记录。</p>
+<ul aria-label="赛事搜索结果" class="discovery-grid discovery-compact-grid" data-discovery-results="">
+<li class="discovery-card discovery-compact-card" data-directory-id="cacc-3-2026" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="individual" data-discovery-registration="open" data-discovery-submission="programming" data-discovery-tags="编程与算法" data-discovery-verification="discovery" data-search-text="ccf算法能力大赛 · 第三届ccf算法能力大赛区域赛（2026） 个人参加 8 小时算法竞赛，包含标准算法题与开放工程优化题。 ccf 公告说明区域赛为 8 小时、5 道题：前 4 题为常规算法题，第 5 题为开放式工程优化题，涉及 ai、安全或优化等方向；支持 c/c++、java、python。 编程与算法 基础算法 专业算法 工程算法 c/c++ java python 竞赛系统中提交程序解答 基础算法与复杂度分析 专业算法与工程建模 限时编码与边界测试" data-searchable="" data-sort-date="2026-11-18" data-sort-name="CCF算法能力大赛 · 第三届CCF算法能力大赛区域赛（2026）" data-sort-rank="100">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span></div>
+</div>
+<h3><a href="/competition-radar-site/discovery/cacc-3-2026/index.html">第三届CCF算法能力大赛区域赛（2026）</a></h3>
+<p class="discovery-card-summary">个人参加 8 小时算法竞赛，包含标准算法题与开放工程优化题。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件研究：</strong>区域赛面向高职、本科、研究生在校生，也允许工程师和自由职业者；个人线上报名。按学籍或居住地选择赛区，不是高校白名单。创业赛道资格独立，需另行核对。 <span class="basis-label basis-editorial">Research-only</span></p>
+</details>
+<div class="compact-card-meta"><span data-testid="registration-window"><strong>区域赛：</strong>2026-11-18 09:00（时区未说明）</span></div> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/cacc-3-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://cacc.ccf.org.cn/" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=cacc-3-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="software-testing-11-2026" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="mixed" data-discovery-registration="open" data-discovery-submission="software" data-discovery-tags="软件开发" data-discovery-verification="discovery" data-search-text="全国大学生软件测试大赛 · 第十一届全国大学生软件测试大赛（2026） 分为 junit 开发者测试、selenium web 测试、嵌入式 python 测试和微信 ai 助手评测四条路径；报名截至 10 月 30 日。 传统赛项分别用 junit 编写开发者测试脚本、用 selenium/java/python 编写 web 功能测试脚本，或在 etest5 与 python 环境完成嵌入式测试；微信小微专项通过真实场景体验发现问题并分级评价。 软件开发 junit web 测试 嵌入式测试 ai 助手评测 开发者测试：junit 测试脚本 web 应用测试：功能测试用例、selenium 测试代码和截图压缩包 嵌入式测试：完成任务后提交规范测试报告 微信小微专项：真实场景体验、问题发现、满意度分级及按参赛指南提交的材料 设计可复现的测试用例 junit 与自动化测试 selenium、java 或 python web 自动化 python 嵌入式测试 记录问题与复现步骤" data-searchable="" data-sort-date="2026-10-30" data-sort-name="全国大学生软件测试大赛 · 第十一届全国大学生软件测试大赛（2026）" data-sort-rank="99">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">软件开发</span></div>
+</div>
+<h3><a href="/competition-radar-site/discovery/software-testing-11-2026/index.html">第十一届全国大学生软件测试大赛（2026）</a></h3>
+<p class="discovery-card-summary">分为 JUnit 开发者测试、Selenium Web 测试、嵌入式 Python 测试和微信 AI 助手评测四条路径；报名截至 10 月 30 日。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件：</strong>打开本届赛事说明，确认参赛对象和适用赛道。</p>
+</details>
+<div class="compact-card-meta"><span data-testid="registration-window"><strong>全赛事报名公告（各赛道条件分别适用）：</strong>2026-10-30 20:00（时区未说明）</span></div> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/software-testing-11-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://www.mooctest.net/" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=software-testing-11-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="qiangwangbei-10-2026" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="mixed" data-discovery-registration="open" data-discovery-submission="unknown" data-discovery-tags="网络与安全" data-discovery-verification="discovery" data-search-text="强网杯全国网络安全挑战赛 · 第十届“强网杯”全国网络安全挑战赛 第十届强网杯覆盖线上挑战、线下赛、行业专项和创新创业等网络安全赛道；线下节点为暂定安排。 官方网站将第十届赛事分为线上赛、线下赛、行业专项、青少年ai应用、网络安全学院邀请赛和创新创业专项；创新赛可提交网络安全解决方案。网站显示线上比赛在10月下旬、线下及专项赛在11月下旬（均为暂定）；官方报名人员按赛规选拔，线下赛最多4名队员和1名指导教师。具体赛题与截止时间以当届通知为准。 网络与安全 网络安全 青少年 ai 应用 网络安全学院 创新创业 网络攻防基础 安全方案表达" data-searchable="" data-sort-date="" data-sort-name="强网杯全国网络安全挑战赛 · 第十届“强网杯”全国网络安全挑战赛" data-sort-rank="88">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">网络与安全</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/qiangwangbei-10-2026/index.html">强网杯全国网络安全挑战赛 · 第十届“强网杯”全国网络安全挑战赛</a></h3>
+<p class="discovery-card-summary">第十届强网杯覆盖线上挑战、线下赛、行业专项和创新创业等网络安全赛道；线下节点为暂定安排。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件研究：</strong>六个赛项规则不同：线上赛面向高校/企业/机构安全力量且队员限中国大陆国籍；线下赛由线上排名选出32队；行业专项为定向邀请；青少年AI专项限初一至高二；网络安全学院邀请赛由每校推荐1队；创新创业赛向社会征集作品。 <span class="basis-label basis-editorial">Research-only</span></p>
+</details>
+<p class="compact-card-conflict">网络安全学院邀请赛向全国高校的网络空间安全学院发出邀请。院校可自愿推荐1队，每队最多4人。</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/qiangwangbei-10-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://www.qiangwangbei.com/" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=qiangwangbei-10-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="g6-4" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="team" data-discovery-registration="open" data-discovery-submission="project" data-discovery-tags="数字媒体|软件开发|创新创业" data-discovery-verification="g6" data-search-text="2026年第十四届全国大学生数字媒体科技作品及创意竞赛 在 2026-11-06 前选 opc 或国际专项赛，并提交可核验成果。 先选一个专项。opc 要围绕真实用户和实际问题，提交已实现核心功能或主要服务流程的产品、体验或服务成果；国际专项赛要完成可展示、可验证的数字媒体作品，表达数字文化、跨文化交流或社会创新主题。两者都要求实际成果和学生原创贡献；概念 ppt 或静态稿不能替代作品。 数字媒体 软件开发 创新创业 产品开发 数字消费 可运行作品 小团队 2026年第十四届全国大学生数字媒体科技作品及创意竞赛“超级个体（opc）·数字新消费”专项赛 2026年第十四届全国大学生数字媒体科技作品及创意竞赛国际专项赛 opc 数字新消费 国际专项赛 把真实用户问题转成可验证的产品 / 服务核心流程 数字媒体、交互或软件成果实现 说明原创贡献、验证过程和第三方资源 跨文化选题与清晰展示 测试核心流程并准备评审演示" data-searchable="" data-sort-date="2026-10-23" data-sort-name="2026年第十四届全国大学生数字媒体科技作品及创意竞赛" data-sort-rank="80">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">数字媒体</span><span class="discovery-tag">软件开发</span></div>
+</div>
+<h3><a href="/competition-radar-site/competitions/4/index.html">2026年第十四届全国大学生数字媒体科技作品及创意竞赛</a></h3>
+<p class="discovery-card-summary">在 2026-11-06 前选 OPC 或国际专项赛，并提交可核验成果。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件：</strong>查看已核实的参赛规则，再按个人情况核对。</p>
+</details>
+<p class="compact-card-conflict">届次来源表述不同，打开详情核对身份和年份。</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/competitions/4/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://static.cmit.cn/uploadfile/2026/1012/2026%E5%B9%B4%E7%AC%AC%E5%8D%81%E5%9B%9B%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%95%B0%E5%AD%97%E5%AA%92%E4%BD%93%E7%A7%91%E6%8A%80%E4%BD%9C%E5%93%81%E5%8F%8A%E5%88%9B%E6%84%8F%E7%AB%9E%E8%B5%9B%E5%9B%BD%E9%99%85%E4%B8%93%E9%A1%B9%E8%B5%9B%E5%8F%82%E8%B5%9B%E6%8C%87%E5%8D%97.pdf" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=g6-4">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="computer-systems-os-regional-2026" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="team" data-discovery-registration="open" data-discovery-submission="software" data-discovery-tags="计算机系统|软件开发" data-discovery-verification="discovery" data-search-text="全国大学生计算机系统能力大赛·操作系统设计赛（秋季区域赛） · 2026操作系统设计赛·中西部与华南区域赛 面向操作系统设计的区域赛，当前开放的赛道包括内核实现和功能挑战；具体题目及提交清单按赛道通知确认。 官方竞赛平台显示2026年操作系统设计赛的中西部与华南区域赛设有内核实现、功能挑战赛道，报名期为2026-10-10至2026-12-27。其它区域赛页面显示的报名状态各不相同，本条只覆盖上述两个明确开放赛道。 计算机系统 软件开发 操作系统 内核实现 功能挑战 系统软件 c语言 操作系统与系统软件基础 c/系统编程" data-searchable="" data-sort-date="2026-12-27" data-sort-name="全国大学生计算机系统能力大赛·操作系统设计赛（秋季区域赛） · 2026操作系统设计赛·中西部与华南区域赛" data-sort-rank="50">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">计算机系统</span><span class="discovery-tag">软件开发</span></div>
+</div>
+<h3><a href="/competition-radar-site/discovery/computer-systems-os-regional-2026/index.html">全国大学生计算机系统能力大赛·操作系统设计赛（秋季区域赛） · 2026操作系统设计赛·中西部与华南区域赛</a></h3>
+<p class="discovery-card-summary">面向操作系统设计的区域赛，当前开放的赛道包括内核实现和功能挑战；具体题目及提交清单按赛道通知确认。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<div class="compact-card-meta"><span data-testid="registration-window"><strong>报名截止：</strong>2026-12-27</span></div> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/computer-systems-os-regional-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://os.educg.net/" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=computer-systems-os-regional-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="ncccu-8-2026" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="mixed" data-discovery-registration="open" data-discovery-submission="unknown" data-discovery-tags="编程与算法|AI 与机器学习|数字媒体" data-discovery-verification="discovery" data-search-text="全国大学生计算机能力挑战赛 · 第八届全国大学生计算机能力挑战赛（2026） 第八届赛事已有程序设计、人工智能和大数据等报名中的赛项；三项任务、截止日期和考试日期不同。 官方平台显示2026年第八届赛事多个赛项正在报名。软件相关的程序设计赛为90分钟个人机考；人工智能赛用胸部x光片做多标签分类；大数据赛基于眼底图像预测青光眼阳性概率，按auroc排名、auprc作为同分次序。不要将不同赛项的报名与考试节点合并成一个截止日。 编程与算法 ai 与机器学习 数字媒体 c/c++ java python 算法编程 胸部x光片多标签分类 大数据预测 程序设计赛：在线编程题的程序解答 人工智能/大数据赛：按各赛项页面提交预测结果文件 程序设计与基础算法 多标签分类与模型评估 数据清洗与预测文件校验" data-searchable="" data-sort-date="2026-11-06" data-sort-name="全国大学生计算机能力挑战赛 · 第八届全国大学生计算机能力挑战赛（2026）" data-sort-rank="50">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span><span class="discovery-tag">AI 与机器学习</span></div>
+</div>
+<h3><a href="/competition-radar-site/discovery/ncccu-8-2026/index.html">第八届全国大学生计算机能力挑战赛（2026）</a></h3>
+<p class="discovery-card-summary">第八届赛事已有程序设计、人工智能和大数据等报名中的赛项；三项任务、截止日期和考试日期不同。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件：</strong>打开本届赛事说明，确认参赛对象和适用赛道。</p>
+</details>
+<div class="compact-card-meta"><span data-testid="registration-window"><strong>人工智能挑战赛·区域赛/省赛：</strong>2026-11-13（日期精度；时区未说明）</span><span data-testid="registration-window"><strong>大数据挑战赛·区域赛/省赛：</strong>2026-11-06（日期精度；时区未说明）</span><span data-testid="registration-window"><strong>程序设计挑战赛·区域赛/省赛：</strong>2026-11-25（日期精度；时区未说明）</span></div> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/ncccu-8-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://www.ncccu.org.cn/index/Paper/case1.html" rel="noopener noreferrer" target="_blank">查看报名说明</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=ncccu-8-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="iscc-password-23-2026" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="team" data-discovery-registration="open" data-discovery-submission="programming" data-discovery-tags="网络与安全|计算机系统" data-discovery-verification="discovery" data-search-text="第23届信息安全与对抗技术竞赛·密码安全赛 · 2026年第23届密码安全赛 以密码算法、协议设计、密码部署与合规检测等为题，按校赛、区域赛、总决赛逐级晋级。 主办方公告说明密码安全赛考察密码算法原理、密码协议设计、密码技术部署运维、密码应用合规检测、密码设备漏洞挖掘和安全攻防。区域赛与总决赛为分时段答题，系统按正确答案计分并以正确题目用时打破同分。 网络与安全 计算机系统 密码安全 密码算法 协议安全 攻防 漏洞分析 在官方竞赛系统内完成赛题并提交答案 晋级线下赛时按通知携带学生证、身份证和盖章报名表 密码学与协议基础 安全分析与问题定位 限时答题与复核" data-searchable="" data-sort-date="2026-10-23" data-sort-name="第23届信息安全与对抗技术竞赛·密码安全赛 · 2026年第23届密码安全赛" data-sort-rank="50">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">网络与安全</span><span class="discovery-tag">计算机系统</span></div>
+</div>
+<h3><a href="/competition-radar-site/discovery/iscc-password-23-2026/index.html">第23届信息安全与对抗技术竞赛·密码安全赛 · 2026年第23届密码安全赛</a></h3>
+<p class="discovery-card-summary">以密码算法、协议设计、密码部署与合规检测等为题，按校赛、区域赛、总决赛逐级晋级。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<div class="compact-card-meta"><span data-testid="registration-window"><strong>报名截止：</strong>2026-10-23</span></div> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/iscc-password-23-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://www.isclab.org.cn/2026/09/08/2026%E5%B9%B4%E7%AC%AC23%E5%B1%8A%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E9%80%9A%E7%9F%A5-%E5%AF%86%E7%A0%81%E5%AE%89%E5%85%A8/" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=iscc-password-23-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="ccpc-2026-season" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="team" data-discovery-registration="unknown" data-discovery-submission="programming" data-discovery-tags="编程与算法" data-discovery-verification="discovery" data-search-text="中国大学生程序设计竞赛 · ccpc 2026 赛季赛事安排 三人高校队参加现场限时编程赛；分站报名受学校名额影响。 ccpc 规则说明队伍由 3 名学生组成，现场机判、5 小时、至少 11 道题。分站报名受学校分配名额约束，不等于个人可直接报名。 编程与算法 团队编程 算法 c/c++ java 竞赛平台中的程序解答 团队算法题协作 快速实现与测试" data-searchable="" data-sort-date="" data-sort-name="中国大学生程序设计竞赛 · CCPC 2026 赛季赛事安排" data-sort-rank="78">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span></div>
+</div>
+<h3><a href="/competition-radar-site/discovery/ccpc-2026-season/index.html">中国大学生程序设计竞赛 · CCPC 2026 赛季赛事安排</a></h3>
+<p class="discovery-card-summary">三人高校队参加现场限时编程赛；分站报名受学校名额影响。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件：</strong>打开本届赛事说明，确认参赛对象和适用赛道。</p>
+</details>
+<div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/ccpc-2026-season/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://ccpc.io/event" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=ccpc-2026-season">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="icpc-asia-east-2026-27" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="team" data-discovery-registration="unknown" data-discovery-submission="programming" data-discovery-tags="编程与算法" data-discovery-verification="discovery" data-search-text="icpc asia east 区域赛 · 2026–2027 亚洲东区区域赛季 多个亚洲东区区域赛站将在 10 月举行；校内选拔和报名状态未知。 官方赛历确认各区域赛站和日期；未来赛站题目、个人资格及报名材料未在该赛历中说明。 编程与算法 团队编程 算法 国际区域赛 团队算法编程" data-searchable="" data-sort-date="" data-sort-name="ICPC Asia East 区域赛 · 2026–2027 亚洲东区区域赛季" data-sort-rank="76">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span></div>
+</div>
+<h3><a href="/competition-radar-site/discovery/icpc-asia-east-2026-27/index.html">ICPC Asia East 区域赛 · 2026–2027 亚洲东区区域赛季</a></h3>
+<p class="discovery-card-summary">多个亚洲东区区域赛站将在 10 月举行；校内选拔和报名状态未知。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/icpc-asia-east-2026-27/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://icpc.global/regionals/results/2025" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=icpc-asia-east-2026-27">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="g6-3" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="AI 与机器学习|数字媒体|创新创业" data-discovery-verification="g6" data-search-text="“松江创世纪”2026首届ai游戏创作创业大赛 在 2026-12-06 前提交一款评委能试玩或下载核验的 ai 游戏。 完成一款可供评委体验或下载核验的 ai 游戏。报名材料至少要提供试玩链接或安装包 / 下载链接之一，并填写作品名称、介绍、创作者信息和封面等平台材料；按实际情况说明是否使用 ai、如何使用，并确保素材有合法权利来源。保存草稿不算正式投稿，须看到平台已提交并形成比赛报名记录。 ai 与机器学习 数字媒体 创新创业 ai 游戏 可运行作品 团队创作 交互体验 自由创作赛道 松江印象赛道 自由创作 松江印象 完成稳定、可试玩或可下载的游戏版本 玩法设计与用户体验 素材权利核对与 ai 使用说明 试玩测试、修复阻断问题和压缩演示路径" data-searchable="" data-sort-date="2026-12-06" data-sort-name="“松江创世纪”2026首届AI游戏创作创业大赛" data-sort-rank="60">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">AI 与机器学习</span><span class="discovery-tag">数字媒体</span></div>
+</div>
+<h3><a href="/competition-radar-site/competitions/3/index.html">“松江创世纪”2026首届AI游戏创作创业大赛</a></h3>
+<p class="discovery-card-summary">在 2026-12-06 前提交一款评委能试玩或下载核验的 AI 游戏。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件：</strong>查看已核实的参赛规则，再按个人情况核对。</p>
+</details>
+<div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/competitions/3/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://aiplaylab.cn/topics/songjiang-ai-genesis-2026/rules" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=g6-3">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="ai-application-innovation-2-2026" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="team" data-discovery-registration="unknown" data-discovery-submission="project" data-discovery-tags="AI 与机器学习|软件开发|创新创业" data-discovery-verification="discovery" data-search-text="第二届全国人工智能应用创新大赛 · 2026年第二届 围绕教育、医疗、制造、消费、金融、出海等场景做可运行 ai agent/大模型应用；通用赛道由团队自主选题。 大赛官方首页说明通用赛道采用团队自主申报命题，专项赛按发布题目提交方案；目标是把智能体和大模型用于真实业务场景并做成可运行作品。首页公布全国高校学生可报名，报名截止2026-11-10 24:00。页面faq另列校赛报名和作品上传截至10月20日，适用范围与全国报名节点需要向本校确认。 ai 与机器学习 软件开发 创新创业 ai agent 大模型应用 教育 医疗 制造 真实业务场景 可运行的 ai agent 或大模型应用作品 专项赛的解决方案及对应赛题要求 agent工作流与工具调用 场景建模与用户验证 应用工程与演示" data-searchable="" data-sort-date="2026-11-10" data-sort-name="第二届全国人工智能应用创新大赛 · 2026年第二届" data-sort-rank="50">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">AI 与机器学习</span><span class="discovery-tag">软件开发</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/ai-application-innovation-2-2026/index.html">第二届全国人工智能应用创新大赛 · 2026年第二届</a></h3>
+<p class="discovery-card-summary">围绕教育、医疗、制造、消费、金融、出海等场景做可运行 AI Agent/大模型应用；通用赛道由团队自主选题。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<p class="compact-card-conflict">官方报名说明已变化，日期正在复核；先打开最新公告确认。</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/ai-application-innovation-2-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://www.ai-race.com.cn/" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=ai-application-innovation-2-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="huawei-ict-11-2026-27" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="mixed" data-discovery-registration="open" data-discovery-submission="unknown" data-discovery-tags="计算机系统|网络与安全|AI 与机器学习|软件开发" data-discovery-verification="discovery" data-search-text="第十一届华为ict大赛中国赛季 · 2026–2027年第十一届 华为官方竞赛入口已进入第十一届中国赛季；比赛按实践赛和创新赛等赛道组织，当前轮次的报名、题目和作品要求需在赛事入口核对。 华为ict大赛官方入口提供当届竞赛导航，华为官方项目页说明大赛以实践赛、创新赛为核心。由于当届中国赛的具体赛道页由动态页面加载，本记录不沿用上一届手册中的日期或题目。 计算机系统 网络与安全 ai 与机器学习 软件开发 ict实践 云 网络 基础软件 昇腾ai 编程 ict网络、云或基础软件方向" data-searchable="" data-sort-date="2026-10-26" data-sort-name="第十一届华为ICT大赛中国赛季 · 2026–2027年第十一届" data-sort-rank="50">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">计算机系统</span><span class="discovery-tag">网络与安全</span></div>
+</div>
+<h3><a href="/competition-radar-site/discovery/huawei-ict-11-2026-27/index.html">第十一届华为ICT大赛中国赛季 · 2026–2027年第十一届</a></h3>
+<p class="discovery-card-summary">华为官方竞赛入口已进入第十一届中国赛季；比赛按实践赛和创新赛等赛道组织，当前轮次的报名、题目和作品要求需在赛事入口核对。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件：</strong>打开本届赛事说明，确认参赛对象和适用赛道。</p>
+</details>
+<div class="compact-card-meta"><span data-testid="registration-window"><strong>中国创新赛（第十一届）：</strong>2026-11-30（日期精度；时区未说明）</span><span data-testid="registration-window"><strong>中国算子赛-昇腾AI算子开发（第十一届）：</strong>2026-10-26（日期精度；时区未说明）</span></div> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/huawei-ict-11-2026-27/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://e.huawei.com/cn/talent/#/ict/innovation-details?zoneCode=027425&amp;zoneId=98269700&amp;compId=85132021&amp;divisionName=%E4%B8%AD%E5%9B%BD%E5%8C%BA&amp;type=C002&amp;isCollectGender=N&amp;enrollmentDeadline=2026-11-30%2023%3A59%3A59&amp;compTotalApplicantCount=4299" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=huawei-ict-11-2026-27">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="graduate-smart-city-12-2026" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="team" data-discovery-registration="unknown" data-discovery-submission="project" data-discovery-tags="软件开发|AI 与机器学习|创新创业" data-discovery-verification="discovery" data-search-text="第十二届中国研究生智慧城市技术与创意设计大赛 · 2026年第十二届 围绕智慧城市问题提出软硬件系统或解决方案；软件作品需提交原创原型系统和源代码证明材料。 中国地质大学（武汉）研究生院的官方校内赛通知列出定向、自由、企业揭榜和地方主题赛道，并举出“ai驱动的道路养护决策与沥青材料方案智能推荐系统”。全国作品包要求项目简表、项目说明书；商业计划书和补充材料可选，软件开发作品必须附原创原型系统、源代码等证明材料。 软件开发 ai 与机器学习 创新创业 智慧城市 ai决策 软件原型 城市运维 项目设计 项目简表 项目说明书 软件开发类作品：原创原型系统与源代码证明 商业计划书及图片/ppt/视频等补充材料为可选 需求拆解与方案设计 原型实现与源代码整理 可行性与展示表达" data-searchable="" data-sort-date="2026-10-23" data-sort-name="第十二届中国研究生智慧城市技术与创意设计大赛 · 2026年第十二届" data-sort-rank="50">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">软件开发</span><span class="discovery-tag">AI 与机器学习</span></div>
+</div>
+<h3><a href="/competition-radar-site/discovery/graduate-smart-city-12-2026/index.html">第十二届中国研究生智慧城市技术与创意设计大赛 · 2026年第十二届</a></h3>
+<p class="discovery-card-summary">围绕智慧城市问题提出软硬件系统或解决方案；软件作品需提交原创原型系统和源代码证明材料。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<div class="compact-card-meta"><span data-testid="registration-window"><strong>报名截止：</strong>2026-10-23T12:00:00+08:00</span></div> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/graduate-smart-city-12-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://graduate.cug.edu.cn/info/1105/19345.htm" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=graduate-smart-city-12-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="saikr-2026-ai-ai-32a8686f11" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="编程与算法|AI 与机器学习" data-discovery-verification="lead" data-search-text='2026 “ai生成世界”— ai图像图形技术创新大赛【算法编程赛道】 · 聚合来源线索 · 待核实 赛氪聚合页收录。✅️各位参赛同学在确认队伍信息并【 扫描专属二维码缴费 】后，请点击页面下方【 已缴费报名 】按钮，将队伍状态设置为"已报名"，缴费状态会在每天晚上由负责老师通知将"未缴费"设置为"线下缴费"，缴费状态不影响参赛。 ✅️（周一至周五时间）一般审核时间为24小时内修改；（周六周日以及经相应的法定节假日期间）一般审核时间为72小时内修改； 近年来，人工智能技术作为新一轮科技革命和产业变革的核心驱动力，已成为国家战略科技力量的重要组成部分。国务院《新一代人工智能发展规划》《“十四五”数字经济发展规划》等文件明确提出，要加快推动人工智能技术创新与产业应用，强化基础研究攻关，培育高水平人才队伍。为搭建技术交流与创新展示平台，挖掘兼具技术实力与 聚合平台描述（未核验）：✅️各位参赛同学在确认队伍信息并【 扫描专属二维码缴费 】后，请点击页面下方【 已缴费报名 】按钮，将队伍状态设置为"已报名"，缴费状态会在每天晚上由负责老师通知将"未缴费"设置为"线下缴费"，缴费状态不影响参赛。 ✅️（周一至周五时间）一般审核时间为24小时内修改；（周六周日以及经相应的法定节假日期间）一般审核时间为72小时内修改； 近年来，人工智能技术作为新一轮科技革命和产业变革的核心驱动力，已成为国家战略科技力量的重要组成部分。国务院《新一代人工智能发展规划》《“十四五”数字经济发展规划》等文件明确提出，要加快推动人工智能技术创新与产业应用，强化基础研究攻关，培育高水平人才队伍。为搭建技术交流与创新展示平台，挖掘兼具技术实力与 编程与算法 ai 与机器学习 算法 编程 ai' data-searchable="" data-sort-date="" data-sort-name="2026 “AI生成世界”— AI图像图形技术创新大赛【算法编程赛道】 · 聚合来源线索 · 待核实" data-sort-rank="42">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span><span class="discovery-tag">AI 与机器学习</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/saikr-2026-ai-ai-32a8686f11/index.html">2026 “AI生成世界”— AI图像图形技术创新大赛【算法编程赛道】 · 聚合来源线索 · 待核实</a></h3>
+<p class="discovery-card-summary">赛氪聚合页收录。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>待核验 · 目前仅有标题线索，不用于判断。</p>
+</details>
+<p class="compact-card-conflict">仅有赛事线索，先核对主办方本届公告</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/saikr-2026-ai-ai-32a8686f11/index.html">查看详情</a>
+<span class="compact-card-next-step">先从主办方官网找到本届赛事公告，再核对报名说明与对应赛道入口。</span><a class="text-link" href="/competition-radar-site/decision/index.html#compare=saikr-2026-ai-ai-32a8686f11">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="saikr-2026-dc3529429b" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="编程与算法|AI 与机器学习" data-discovery-verification="lead" data-search-text="2026华智·高校大学生人工智能大赛 · 聚合来源线索 · 待核实 赛氪聚合页收录。2026年政府工作报告连续第三年写入“深化拓展‘人工智能+’”，国家围绕算力、数据、场景密集出台政策。大赛应运而生，推动新一代智能技术与国土经济产业深度融合。大赛贯彻落实国家智能经济发展战略，搭建青年人才科技创新与产业实践的高水平平台，引导青年学子深入理解智能算法在国土治理中的赋能路径。中国国土经济学会产业创新专业委员会联合中国移动通信联合会教育与科学技术研究院，共同举办 2026华智·高校大学生人工智能大赛 。 练习题库正式开放 赛事亮点 权威主办 · 双单位联合 ai核心知识 · 客观题作答 荣誉证书 · 电子版+纸质版证书 一、组织机构 主办单位：中国移动通信联合会教育与科学技术研究院 中国国土经济学会产业创新专业委员会 技术 聚合平台描述（未核验）：2026年政府工作报告连续第三年写入“深化拓展‘人工智能+’”，国家围绕算力、数据、场景密集出台政策。大赛应运而生，推动新一代智能技术与国土经济产业深度融合。大赛贯彻落实国家智能经济发展战略，搭建青年人才科技创新与产业实践的高水平平台，引导青年学子深入理解智能算法在国土治理中的赋能路径。中国国土经济学会产业创新专业委员会联合中国移动通信联合会教育与科学技术研究院，共同举办 2026华智·高校大学生人工智能大赛 。 练习题库正式开放 赛事亮点 权威主办 · 双单位联合 ai核心知识 · 客观题作答 荣誉证书 · 电子版+纸质版证书 一、组织机构 主办单位：中国移动通信联合会教育与科学技术研究院 中国国土经济学会产业创新专业委员会 技术 编程与算法 ai 与机器学习 算法 编程 人工智能 ai" data-searchable="" data-sort-date="" data-sort-name="2026华智·高校大学生人工智能大赛 · 聚合来源线索 · 待核实" data-sort-rank="42">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span><span class="discovery-tag">AI 与机器学习</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/saikr-2026-dc3529429b/index.html">2026华智·高校大学生人工智能大赛 · 聚合来源线索 · 待核实</a></h3>
+<p class="discovery-card-summary">赛氪聚合页收录。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>待核验 · 目前仅有标题线索，不用于判断。</p>
+</details>
+<p class="compact-card-conflict">仅有赛事线索，先核对主办方本届公告</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/saikr-2026-dc3529429b/index.html">查看详情</a>
+<span class="compact-card-next-step">先从主办方官网找到本届赛事公告，再核对报名说明与对应赛道入口。</span><a class="text-link" href="/competition-radar-site/decision/index.html#compare=saikr-2026-dc3529429b">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="saikr-2026-295159109f" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="AI 与机器学习" data-discovery-verification="lead" data-search-text="2026华智·高校大学生数据分析大赛 · 聚合来源线索 · 待核实 赛氪聚合页收录。2026 华智·高校大学生数据分析大赛聚焦数据分析相关知识与应用能力的综合考查，旨在培养具备数据思维、建模能力和实证分析素养的复合型人才。 赛事紧扣 「智能驱动・国土赋能」 主题，侧重基础理论设计考查内容。 题目示例： 在构建区域资源环境承载力评价指标体系时，下列指标中属于「负向指标」（数值越大越不利于承载力）的是： a. 人均耕地面积 b. 万元 gdp 用水量 c. 森林覆盖率 d. 人均水资源量 答案：b。 万元 gdp 用水量反映单位产出消耗的水资源量，数值越大说明资源利用效率越低，属负向（成本型）指标，需在做综合评价前进行逆向化处理；a、c、d 均为正向指标，数值越大越有利。 组织机构 主办单位 中国国土经济学会 产业创新 聚合平台描述（未核验）：2026 华智·高校大学生数据分析大赛聚焦数据分析相关知识与应用能力的综合考查，旨在培养具备数据思维、建模能力和实证分析素养的复合型人才。 赛事紧扣 「智能驱动・国土赋能」 主题，侧重基础理论设计考查内容。 题目示例： 在构建区域资源环境承载力评价指标体系时，下列指标中属于「负向指标」（数值越大越不利于承载力）的是： a. 人均耕地面积 b. 万元 gdp 用水量 c. 森林覆盖率 d. 人均水资源量 答案：b。 万元 gdp 用水量反映单位产出消耗的水资源量，数值越大说明资源利用效率越低，属负向（成本型）指标，需在做综合评价前进行逆向化处理；a、c、d 均为正向指标，数值越大越有利。 组织机构 主办单位 中国国土经济学会 产业创新 ai 与机器学习 ai 数据分析" data-searchable="" data-sort-date="" data-sort-name="2026华智·高校大学生数据分析大赛 · 聚合来源线索 · 待核实" data-sort-rank="42">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">AI 与机器学习</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/saikr-2026-295159109f/index.html">2026华智·高校大学生数据分析大赛 · 聚合来源线索 · 待核实</a></h3>
+<p class="discovery-card-summary">赛氪聚合页收录。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>待核验 · 目前仅有标题线索，不用于判断。</p>
+</details>
+<p class="compact-card-conflict">仅有赛事线索，先核对主办方本届公告</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/saikr-2026-295159109f/index.html">查看详情</a>
+<span class="compact-card-next-step">先从主办方官网找到本届赛事公告，再核对报名说明与对应赛道入口。</span><a class="text-link" href="/competition-radar-site/decision/index.html#compare=saikr-2026-295159109f">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="saikr-2026-1795dfcbcc" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="编程与算法|AI 与机器学习" data-discovery-verification="lead" data-search-text="2026年全国大学生人工智能应用实践大赛 · 聚合来源线索 · 待核实 赛氪聚合页收录。指定创作平台 大赛创作工具与平台使用说明 本次大赛指定 腾讯云 workbuddy 平台 核心创作工具 作品核心创作须依托该平台完成 · 选手可免费使用平台基础功能开展创作 赛事赋能与成长收获 01 零基础可参加 不写代码 ，借助 ai 工具完成作品创作，使用 手机 或 电脑 都能参赛 02 配套学习课程 配套免费课程，轻松上手，做出专属于你的第一件作品 03 有效作品即获奖 提交有效作品即得 优秀奖 ，颁发电子 + 纸质版证书； 师生同奖 ，指导老师可获优秀指导老师证书 04 积攒求职项目经历 一等奖及以上获奖选手可得 推荐函 ；作品版权归属参赛选手本人，可直接用于个人求职、作品集制作 一、组织单位 主办单位：四川汇鑫创融大数据研 聚合平台描述（未核验）：指定创作平台 大赛创作工具与平台使用说明 本次大赛指定 腾讯云 workbuddy 平台 核心创作工具 作品核心创作须依托该平台完成 · 选手可免费使用平台基础功能开展创作 赛事赋能与成长收获 01 零基础可参加 不写代码 ，借助 ai 工具完成作品创作，使用 手机 或 电脑 都能参赛 02 配套学习课程 配套免费课程，轻松上手，做出专属于你的第一件作品 03 有效作品即获奖 提交有效作品即得 优秀奖 ，颁发电子 + 纸质版证书； 师生同奖 ，指导老师可获优秀指导老师证书 04 积攒求职项目经历 一等奖及以上获奖选手可得 推荐函 ；作品版权归属参赛选手本人，可直接用于个人求职、作品集制作 一、组织单位 主办单位：四川汇鑫创融大数据研 编程与算法 ai 与机器学习 算法 编程 人工智能 ai" data-searchable="" data-sort-date="" data-sort-name="2026年全国大学生人工智能应用实践大赛 · 聚合来源线索 · 待核实" data-sort-rank="42">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span><span class="discovery-tag">AI 与机器学习</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/saikr-2026-1795dfcbcc/index.html">2026年全国大学生人工智能应用实践大赛 · 聚合来源线索 · 待核实</a></h3>
+<p class="discovery-card-summary">赛氪聚合页收录。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>待核验 · 目前仅有标题线索，不用于判断。</p>
+</details>
+<p class="compact-card-conflict">仅有赛事线索，先核对主办方本届公告</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/saikr-2026-1795dfcbcc/index.html">查看详情</a>
+<span class="compact-card-next-step">先从主办方官网找到本届赛事公告，再核对报名说明与对应赛道入口。</span><a class="text-link" href="/competition-radar-site/decision/index.html#compare=saikr-2026-1795dfcbcc">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="saikr-2026-d75ff931df" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="编程与算法" data-discovery-verification="lead" data-search-text="2026年大学生统计科学与算法编程挑战赛——数据统计赛项 · 聚合来源线索 · 待核实 赛氪聚合页收录该赛事；主办方、本届规则和实际任务需回到正式来源核实。 当前只有聚合平台赛事条目；主办方公告和本届任务尚未核实。 编程与算法 算法 编程" data-searchable="" data-sort-date="" data-sort-name="2026年大学生统计科学与算法编程挑战赛——数据统计赛项 · 聚合来源线索 · 待核实" data-sort-rank="42">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/saikr-2026-d75ff931df/index.html">2026年大学生统计科学与算法编程挑战赛——数据统计赛项 · 聚合来源线索 · 待核实</a></h3>
+<p class="discovery-card-summary">赛氪聚合页收录该赛事；主办方、本届规则和实际任务需回到正式来源核实。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>待核验 · 目前仅有标题线索，不用于判断。</p>
+</details>
+<p class="compact-card-conflict">仅有赛事线索，先核对主办方本届公告</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/saikr-2026-d75ff931df/index.html">查看详情</a>
+<span class="compact-card-next-step">先从主办方官网找到本届赛事公告，再核对报名说明与对应赛道入口。</span><a class="text-link" href="/competition-radar-site/decision/index.html#compare=saikr-2026-d75ff931df">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="saikr-2026-21ec037781" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="编程与算法" data-discovery-verification="lead" data-search-text="2026年大学生统计科学与算法编程挑战赛——算法赛道 · 聚合来源线索 · 待核实 赛氪聚合页收录。一、组织单位 主办单位：山东省应用统计学会 【简介】山东省应用统计学会是在省民政厅注册的学术类社会组织，于1989年成立，本学会是全省目前从事统计调查和绩效评估机构中 唯一的4a级学会 ，是省科协的组成单位和省社科联的直属学会。 二、参赛对象 普通高等院校、高职院校、二级学院、独立学院、本、专科在校大学生及研究生均可报名参加，专业不限；会员单位及其他相关人员也可以报名参赛。 三、赛程安排 （最后一场正在报名中） 报名时间：即日起—2026年6月26日 测试时间：2026年6月27日13：00—18：00 考试时间：2026年6月28日13：00—18：00【考场开放5小时，期间任选时间参与答题即可】 报名时间：即日起—2026年10 聚合平台描述（未核验）：一、组织单位 主办单位：山东省应用统计学会 【简介】山东省应用统计学会是在省民政厅注册的学术类社会组织，于1989年成立，本学会是全省目前从事统计调查和绩效评估机构中 唯一的4a级学会 ，是省科协的组成单位和省社科联的直属学会。 二、参赛对象 普通高等院校、高职院校、二级学院、独立学院、本、专科在校大学生及研究生均可报名参加，专业不限；会员单位及其他相关人员也可以报名参赛。 三、赛程安排 （最后一场正在报名中） 报名时间：即日起—2026年6月26日 测试时间：2026年6月27日13：00—18：00 考试时间：2026年6月28日13：00—18：00【考场开放5小时，期间任选时间参与答题即可】 报名时间：即日起—2026年10 编程与算法 算法 编程" data-searchable="" data-sort-date="" data-sort-name="2026年大学生统计科学与算法编程挑战赛——算法赛道 · 聚合来源线索 · 待核实" data-sort-rank="42">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/saikr-2026-21ec037781/index.html">2026年大学生统计科学与算法编程挑战赛——算法赛道 · 聚合来源线索 · 待核实</a></h3>
+<p class="discovery-card-summary">赛氪聚合页收录。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>待核验 · 目前仅有标题线索，不用于判断。</p>
+</details>
+<p class="compact-card-conflict">仅有赛事线索，先核对主办方本届公告</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/saikr-2026-21ec037781/index.html">查看详情</a>
+<span class="compact-card-next-step">先从主办方官网找到本届赛事公告，再核对报名说明与对应赛道入口。</span><a class="text-link" href="/competition-radar-site/decision/index.html#compare=saikr-2026-21ec037781">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="saikr-2026-84281cec9b" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="编程与算法|AI 与机器学习|软件开发" data-discovery-verification="lead" data-search-text="2026年第三届大学生高新技术竞赛—数据库实操竞赛 · 聚合来源线索 · 待核实 赛氪聚合页收录。第二场考试时间：2026年10月24日9：00 - 18：00（期间任选一小时参赛） 图文报名流程： 点击查看 2026年第三届大学生高新技术竞赛—数据库实操竞赛 自开赛以来，收获众多高校与行业媒体的关注，多家教育平台相继发布赛事报道、参赛动态，越来越多院校组织学生踊跃参赛，已得到了社会各界人士、老师、同学的广泛支持！ 各大媒体平台相关报道 竞赛核心亮点 ✨ 官方权威认证—— 中国国际科技促进会物联网工作委员会 主办，赛事认可度高，学业求职双向加分 ✨ 全程线上，轻松竞赛—— 线上 闭卷考核，两场竞赛，一次报名，单日9：00-18：00，期间任选1小时参赛，备考节奏自由 ✨ 以赛促练—— 以 mysql 实战为核心，理论客观题 +  聚合平台描述（未核验）：第二场考试时间：2026年10月24日9：00 - 18：00（期间任选一小时参赛） 图文报名流程： 点击查看 2026年第三届大学生高新技术竞赛—数据库实操竞赛 自开赛以来，收获众多高校与行业媒体的关注，多家教育平台相继发布赛事报道、参赛动态，越来越多院校组织学生踊跃参赛，已得到了社会各界人士、老师、同学的广泛支持！ 各大媒体平台相关报道 竞赛核心亮点 ✨ 官方权威认证—— 中国国际科技促进会物联网工作委员会 主办，赛事认可度高，学业求职双向加分 ✨ 全程线上，轻松竞赛—— 线上 闭卷考核，两场竞赛，一次报名，单日9：00-18：00，期间任选1小时参赛，备考节奏自由 ✨ 以赛促练—— 以 mysql 实战为核心，理论客观题 +  编程与算法 ai 与机器学习 软件开发 算法 编程 ai 软件 数据库" data-searchable="" data-sort-date="" data-sort-name="2026年第三届大学生高新技术竞赛—数据库实操竞赛 · 聚合来源线索 · 待核实" data-sort-rank="42">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span><span class="discovery-tag">AI 与机器学习</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/saikr-2026-84281cec9b/index.html">2026年第三届大学生高新技术竞赛—数据库实操竞赛 · 聚合来源线索 · 待核实</a></h3>
+<p class="discovery-card-summary">赛氪聚合页收录。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>待核验 · 目前仅有标题线索，不用于判断。</p>
+</details>
+<p class="compact-card-conflict">仅有赛事线索，先核对主办方本届公告</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/saikr-2026-84281cec9b/index.html">查看详情</a>
+<span class="compact-card-next-step">先从主办方官网找到本届赛事公告，再核对报名说明与对应赛道入口。</span><a class="text-link" href="/competition-radar-site/decision/index.html#compare=saikr-2026-84281cec9b">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="saikr-2026-bf527f871f" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="AI 与机器学习|软件开发" data-discovery-verification="lead" data-search-text="2026年第二届工业互联网技术与应用挑战赛——工业互联网专项赛道 · 聚合来源线索 · 待核实 赛氪聚合页收录。📌以下为部分高校官方报道（含武汉华夏理工学院、南昌工学院、大连东软信息学院等），组委会建议本次竞赛可作为 省b或国c赛事 ，具体情况需咨询本校教师。 一、主办单位 主办单位：中国互联网协会智慧教育工作委员会 承办单位：工业互联网产业联盟 技术支持单位：赛氪网 【简介】中国互联网协会成立于2001年5月25日，由国内从事互联网行业的网络运营商、服务提供商、设备制造商、系统集成商以及科研、教育机构等70多家互联网从业者共同发起成立，是由中国互联网行业及与互联网相关的企事业单位自愿结成的行业性的全国性的非营利性的社会组织，现有会员1000余家。中国互联网协会现任理事长为工业和信息化部原副部长、中国移动通信集团有限公司原董事长尚冰，主要行业 聚合平台描述（未核验）：📌以下为部分高校官方报道（含武汉华夏理工学院、南昌工学院、大连东软信息学院等），组委会建议本次竞赛可作为 省b或国c赛事 ，具体情况需咨询本校教师。 一、主办单位 主办单位：中国互联网协会智慧教育工作委员会 承办单位：工业互联网产业联盟 技术支持单位：赛氪网 【简介】中国互联网协会成立于2001年5月25日，由国内从事互联网行业的网络运营商、服务提供商、设备制造商、系统集成商以及科研、教育机构等70多家互联网从业者共同发起成立，是由中国互联网行业及与互联网相关的企事业单位自愿结成的行业性的全国性的非营利性的社会组织，现有会员1000余家。中国互联网协会现任理事长为工业和信息化部原副部长、中国移动通信集团有限公司原董事长尚冰，主要行业 ai 与机器学习 软件开发 ai 软件 工业互联网" data-searchable="" data-sort-date="" data-sort-name="2026年第二届工业互联网技术与应用挑战赛——工业互联网专项赛道 · 聚合来源线索 · 待核实" data-sort-rank="42">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">AI 与机器学习</span><span class="discovery-tag">软件开发</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/saikr-2026-bf527f871f/index.html">2026年第二届工业互联网技术与应用挑战赛——工业互联网专项赛道 · 聚合来源线索 · 待核实</a></h3>
+<p class="discovery-card-summary">赛氪聚合页收录。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>待核验 · 目前仅有标题线索，不用于判断。</p>
+</details>
+<p class="compact-card-conflict">仅有赛事线索，先核对主办方本届公告</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/saikr-2026-bf527f871f/index.html">查看详情</a>
+<span class="compact-card-next-step">先从主办方官网找到本届赛事公告，再核对报名说明与对应赛道入口。</span><a class="text-link" href="/competition-radar-site/decision/index.html#compare=saikr-2026-bf527f871f">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="saikr-2026-91e5dd802a" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="编程与算法|AI 与机器学习" data-discovery-verification="lead" data-search-text="2026年第二届计算机能力竞赛暨城市联赛（冬季赛）——算法编程赛道 · 聚合来源线索 · 待核实 赛氪聚合页收录。10 道 算法题目 4 种 编程语言 acm 大赛赛制 1000 丰厚奖金池 一、组织单位 主办单位： 大连市计算机学会 苏州市计算机学会 天津市计算机学会 二、参赛对象 普通高等院校、高职院校、二级学院、独立学院、 本、专科在校大学生及研究生 均可报名参加， 专业不限 ；其他社会人员亦可报名参赛。 -以上仅为部分获奖学生展示- 三、竞赛详情 （一）赛程安排 事项 时间 报名时间 2026年8月 — 2026年12月 第一场 · 测试时间 2026年10月31日 10:00 – 12:00 第一场 · 考试时间 2026年10月31日 13:00 – 18:00（考场开放5小时，期间任选时间进入答题） 第二场 · 测试时间 2026 聚合平台描述（未核验）：10 道 算法题目 4 种 编程语言 acm 大赛赛制 1000 丰厚奖金池 一、组织单位 主办单位： 大连市计算机学会 苏州市计算机学会 天津市计算机学会 二、参赛对象 普通高等院校、高职院校、二级学院、独立学院、 本、专科在校大学生及研究生 均可报名参加， 专业不限 ；其他社会人员亦可报名参赛。 -以上仅为部分获奖学生展示- 三、竞赛详情 （一）赛程安排 事项 时间 报名时间 2026年8月 — 2026年12月 第一场 · 测试时间 2026年10月31日 10:00 – 12:00 第一场 · 考试时间 2026年10月31日 13:00 – 18:00（考场开放5小时，期间任选时间进入答题） 第二场 · 测试时间 2026 编程与算法 ai 与机器学习 算法 编程 ai" data-searchable="" data-sort-date="" data-sort-name="2026年第二届计算机能力竞赛暨城市联赛（冬季赛）——算法编程赛道 · 聚合来源线索 · 待核实" data-sort-rank="42">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span><span class="discovery-tag">AI 与机器学习</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/saikr-2026-91e5dd802a/index.html">2026年第二届计算机能力竞赛暨城市联赛（冬季赛）——算法编程赛道 · 聚合来源线索 · 待核实</a></h3>
+<p class="discovery-card-summary">赛氪聚合页收录。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>待核验 · 目前仅有标题线索，不用于判断。</p>
+</details>
+<p class="compact-card-conflict">仅有赛事线索，先核对主办方本届公告</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/saikr-2026-91e5dd802a/index.html">查看详情</a>
+<span class="compact-card-next-step">先从主办方官网找到本届赛事公告，再核对报名说明与对应赛道入口。</span><a class="text-link" href="/competition-radar-site/decision/index.html#compare=saikr-2026-91e5dd802a">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="saikr-2026it-877abe8b98" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="编程与算法|AI 与机器学习" data-discovery-verification="lead" data-search-text="2026年第十六届it科技节--人工智能科技作品 创新设计大赛 · 聚合来源线索 · 待核实 赛氪聚合页收录。（一）参赛对象 本次大赛面向在校的全体本科生、研究生。 （二）竞赛规则 (1)参赛人员不限专业； (2)以个人为单位即单人参赛； (3)参赛人员必须为华航在册在校学生，报名须保证个人信息准确有效； 命题与竞赛评分 网络基本原理：计算机网络的基本原理； 互联网技术：h3c路由与交换基础； linux基础：linux文件与目录基本操作。 比赛形式为上机考试，考点包含以上知识点但不仅限于以上知识点，随机抽取题目。 参考书： 1）计算机网络原理，中国水利水电出版社，季福坤 2）路由交换技术（1-4卷），清华大学出版社，杭州华三通信技术有限公司 3）《鸟哥的linux私房菜基础学习篇（第四版）》，鸟哥著 设置比赛评审专家组，对参赛选手，进行统 聚合平台描述（未核验）：（一）参赛对象 本次大赛面向在校的全体本科生、研究生。 （二）竞赛规则 (1)参赛人员不限专业； (2)以个人为单位即单人参赛； (3)参赛人员必须为华航在册在校学生，报名须保证个人信息准确有效； 命题与竞赛评分 网络基本原理：计算机网络的基本原理； 互联网技术：h3c路由与交换基础； linux基础：linux文件与目录基本操作。 比赛形式为上机考试，考点包含以上知识点但不仅限于以上知识点，随机抽取题目。 参考书： 1）计算机网络原理，中国水利水电出版社，季福坤 2）路由交换技术（1-4卷），清华大学出版社，杭州华三通信技术有限公司 3）《鸟哥的linux私房菜基础学习篇（第四版）》，鸟哥著 设置比赛评审专家组，对参赛选手，进行统 编程与算法 ai 与机器学习 算法 编程 人工智能 ai" data-searchable="" data-sort-date="" data-sort-name="2026年第十六届IT科技节--人工智能科技作品 创新设计大赛 · 聚合来源线索 · 待核实" data-sort-rank="42">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span><span class="discovery-tag">AI 与机器学习</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/saikr-2026it-877abe8b98/index.html">2026年第十六届IT科技节--人工智能科技作品 创新设计大赛 · 聚合来源线索 · 待核实</a></h3>
+<p class="discovery-card-summary">赛氪聚合页收录。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>待核验 · 目前仅有标题线索，不用于判断。</p>
+</details>
+<p class="compact-card-conflict">仅有赛事线索，先核对主办方本届公告</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/saikr-2026it-877abe8b98/index.html">查看详情</a>
+<span class="compact-card-next-step">先从主办方官网找到本届赛事公告，再核对报名说明与对应赛道入口。</span><a class="text-link" href="/competition-radar-site/decision/index.html#compare=saikr-2026it-877abe8b98">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="saikr-2026-java-2fb6ad89de" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="编程与算法|网络与安全" data-discovery-verification="lead" data-search-text="2026年第四届大学生信息系统创新大赛--java编程巅峰赛 · 聚合来源线索 · 待核实 赛氪聚合页收录。⭐线上单机位，考试地点任选，考试时间：10月10日10：00—10月11日23：00【期间任选1小时参与答题】 预计赛后三天内可查看获奖名单，并下载证书 ； ⭐初赛考察 50道客观题 （包含单选+多选+判断），免费领取专属题库，正式考试 抽取题库50%原题 ！ ⭐初赛根据最终成绩评奖， 各奖项不限人数 ， 90分以上全部一等奖 ，未获奖选手完整参赛可获得优秀奖，三等奖以上选手可 免费晋级决赛 ，一场比赛获取两张证书！ 一、组织机构 主办单位：湖北省计算机信息系统集成协会 湖北省计算机信息系统集成协会，成立于2019年12月27日，是由湖北境内依法注册的从事计算机信息系统集成的信息技术服务、设备制造、工程建设、系统运维、网络安全、设备 聚合平台描述（未核验）：⭐线上单机位，考试地点任选，考试时间：10月10日10：00—10月11日23：00【期间任选1小时参与答题】 预计赛后三天内可查看获奖名单，并下载证书 ； ⭐初赛考察 50道客观题 （包含单选+多选+判断），免费领取专属题库，正式考试 抽取题库50%原题 ！ ⭐初赛根据最终成绩评奖， 各奖项不限人数 ， 90分以上全部一等奖 ，未获奖选手完整参赛可获得优秀奖，三等奖以上选手可 免费晋级决赛 ，一场比赛获取两张证书！ 一、组织机构 主办单位：湖北省计算机信息系统集成协会 湖北省计算机信息系统集成协会，成立于2019年12月27日，是由湖北境内依法注册的从事计算机信息系统集成的信息技术服务、设备制造、工程建设、系统运维、网络安全、设备 编程与算法 网络与安全 算法 编程" data-searchable="" data-sort-date="" data-sort-name="2026年第四届大学生信息系统创新大赛--JAVA编程巅峰赛 · 聚合来源线索 · 待核实" data-sort-rank="42">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span><span class="discovery-tag">网络与安全</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/saikr-2026-java-2fb6ad89de/index.html">2026年第四届大学生信息系统创新大赛--JAVA编程巅峰赛 · 聚合来源线索 · 待核实</a></h3>
+<p class="discovery-card-summary">赛氪聚合页收录。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>待核验 · 目前仅有标题线索，不用于判断。</p>
+</details>
+<p class="compact-card-conflict">仅有赛事线索，先核对主办方本届公告</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/saikr-2026-java-2fb6ad89de/index.html">查看详情</a>
+<span class="compact-card-next-step">先从主办方官网找到本届赛事公告，再核对报名说明与对应赛道入口。</span><a class="text-link" href="/competition-radar-site/decision/index.html#compare=saikr-2026-java-2fb6ad89de">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="saikr-2026-python-b69d85c31f" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="编程与算法|网络与安全" data-discovery-verification="lead" data-search-text="2026年第四届大学生信息系统创新大赛--python编程巅峰赛 · 聚合来源线索 · 待核实 赛氪聚合页收录。为深入落实网络强国、教育强国战略部署，聚焦信息技术应用创新能力提升核心目标，着力培育兼具扎实实战能力与前沿创新素养的复合型人才，湖北省计算机信息系统集成协会决定举办2026年第四届大学生信息系统创新大赛。 一、组织机构 主办单位：湖北省计算机信息系统集成协会 【简介】湖北省计算机信息系统集成协会，成立于2019年12月27日，是由湖北境内依法注册的从事计算机信息系统集成的信息技术服务、设备制造、工程建设、系统运维、网络安全、设备销售等相关联的企业自愿组成的全省性、行业性、非营利性的社会团体。 二、参赛对象 普通高等院校、高职院校、二级学院、独立学院、本、专科在校大学生及研究生均可报名参加，专业不限；其他社会人员也可以报名参赛。 三、 聚合平台描述（未核验）：为深入落实网络强国、教育强国战略部署，聚焦信息技术应用创新能力提升核心目标，着力培育兼具扎实实战能力与前沿创新素养的复合型人才，湖北省计算机信息系统集成协会决定举办2026年第四届大学生信息系统创新大赛。 一、组织机构 主办单位：湖北省计算机信息系统集成协会 【简介】湖北省计算机信息系统集成协会，成立于2019年12月27日，是由湖北境内依法注册的从事计算机信息系统集成的信息技术服务、设备制造、工程建设、系统运维、网络安全、设备销售等相关联的企业自愿组成的全省性、行业性、非营利性的社会团体。 二、参赛对象 普通高等院校、高职院校、二级学院、独立学院、本、专科在校大学生及研究生均可报名参加，专业不限；其他社会人员也可以报名参赛。 三、 编程与算法 网络与安全 算法 编程" data-searchable="" data-sort-date="" data-sort-name="2026年第四届大学生信息系统创新大赛--Python编程巅峰赛 · 聚合来源线索 · 待核实" data-sort-rank="42">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span><span class="discovery-tag">网络与安全</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/saikr-2026-python-b69d85c31f/index.html">2026年第四届大学生信息系统创新大赛--Python编程巅峰赛 · 聚合来源线索 · 待核实</a></h3>
+<p class="discovery-card-summary">赛氪聚合页收录。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>待核验 · 目前仅有标题线索，不用于判断。</p>
+</details>
+<p class="compact-card-conflict">仅有赛事线索，先核对主办方本届公告</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/saikr-2026-python-b69d85c31f/index.html">查看详情</a>
+<span class="compact-card-next-step">先从主办方官网找到本届赛事公告，再核对报名说明与对应赛道入口。</span><a class="text-link" href="/competition-radar-site/decision/index.html#compare=saikr-2026-python-b69d85c31f">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="saikr-x-game-2026-aeba3101b3" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="AI 与机器学习" data-discovery-verification="lead" data-search-text="x-game 2026智能新源汽车大数据竞赛 · 聚合来源线索 · 待核实 赛氪聚合页收录该赛事；主办方、本届规则和实际任务需回到正式来源核实。 当前只有聚合平台赛事条目；主办方公告和本届任务尚未核实。 ai 与机器学习 ai 大数据" data-searchable="" data-sort-date="" data-sort-name="X-GAME 2026智能新源汽车大数据竞赛 · 聚合来源线索 · 待核实" data-sort-rank="42">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">AI 与机器学习</span></div>
+<span class="directory-cycle-pill cycle-current">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/saikr-x-game-2026-aeba3101b3/index.html">X-GAME 2026智能新源汽车大数据竞赛 · 聚合来源线索 · 待核实</a></h3>
+<p class="discovery-card-summary">赛氪聚合页收录该赛事；主办方、本届规则和实际任务需回到正式来源核实。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>待核验 · 目前仅有标题线索，不用于判断。</p>
+</details>
+<p class="compact-card-conflict">仅有赛事线索，先核对主办方本届公告</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/saikr-x-game-2026-aeba3101b3/index.html">查看详情</a>
+<span class="compact-card-next-step">先从主办方官网找到本届赛事公告，再核对报名说明与对应赛道入口。</span><a class="text-link" href="/competition-radar-site/decision/index.html#compare=saikr-x-game-2026-aeba3101b3">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="g6-2" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="individual" data-discovery-registration="closed" data-discovery-submission="programming" data-discovery-tags="编程与算法|计算机系统" data-discovery-verification="g6" data-search-text="2026 ccf ccsp竞赛 限时完成计算机系统与程序设计题；先核对报名状态和赛场通知。 在机考环境中完成程序设计题，展示算法、编程和计算机系统能力。2026 全国赛共 5 题，每题 100 分；本届赛事不是提交长期开发的产品项目。若已获准参赛，按最新版赛场通知准备入场和纸质资料。 编程与算法 计算机系统 算法编程 计算机系统 机考解题 个人参赛 算法设计、复杂度判断与程序实现 计算机系统基础与系统设计 选择一门受支持语言并熟练调试 长时段安排、读题和纸质资料索引" data-searchable="" data-sort-date="2026-10-11" data-sort-name="2026 CCF CCSP竞赛" data-sort-rank="70">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span><span class="discovery-tag">计算机系统</span></div>
+<span class="directory-cycle-pill cycle-current">已截止</span> </div>
+<h3><a href="/competition-radar-site/competitions/2/index.html">2026 CCF CCSP竞赛</a></h3>
+<p class="discovery-card-summary">限时完成计算机系统与程序设计题；先核对报名状态和赛场通知。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件研究：</strong>面向全国高校在校生；全日制本科、专科或研究生身份；CSP 第37至43次任一次至少200分，名额按成绩和报名顺序筛选。 <span class="basis-label basis-editorial">Research-only</span></p>
+</details>
+<p class="compact-card-conflict">报名已截止</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/competitions/2/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://ccsp.ccf.org.cn/ccsp/tzgg/2026-09-09/931080.shtml" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=g6-2">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="ccf-blockchain-5-2026" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="team" data-discovery-registration="closed" data-discovery-submission="project" data-discovery-tags="软件开发|网络与安全|创新创业" data-discovery-verification="discovery" data-search-text="ccf大学生区块链技术与创新应用竞赛 · 第五届（2026） 面向全国高校和科研院所全日制在校学生的团队创新赛，报名截止 10 月 20 日；作品提交另至 10 月 31 日。 参赛对象为全国高校和科研院所全日制在校专科、本科、硕士及博士学生；每队最多 4 名学生并配 1 名指导教师，不支持跨校组队。参赛团队围绕真实场景或应用自主命题，设计并开发区块链技术或应用创新作品；官方说明重点体现安全性或隐私性，平台不限。赛事分线上函评和现场会评，现场答辩 20 分钟，其中陈述、演示和测试共 15 分钟，专家提问 5 分钟。 软件开发 网络与安全 创新创业 区块链 应用开发 安全 隐私 系统设计 软件测试 设计报告：应用背景、拟解决问题、设计方案、实现功能与指标、软件流程 测试报告：测试平台、测试数据和结果分析 可执行代码；作品文字描述使用中文，按官方命名、格式和容量要求打包 所有送审材料须匿名，不得出现学校、指导教师或队员身份信息；论文不能代替作品 晋级队伍现场准备 ppt 陈述、演示、测试及答辩 区块链技术或应用方案设计 安全性或隐私性设计 原型实现与测试" data-searchable="" data-sort-date="2026-10-20" data-sort-name="CCF大学生区块链技术与创新应用竞赛 · 第五届（2026）" data-sort-rank="50">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">软件开发</span><span class="discovery-tag">网络与安全</span></div>
+<span class="directory-cycle-pill cycle-current">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/ccf-blockchain-5-2026/index.html">CCF大学生区块链技术与创新应用竞赛 · 第五届（2026）</a></h3>
+<p class="discovery-card-summary">面向全国高校和科研院所全日制在校学生的团队创新赛，报名截止 10 月 20 日；作品提交另至 10 月 31 日。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<div class="compact-card-meta"><span data-testid="registration-window"><strong>全国赛：</strong>2026-10-20（日期精度；时区未说明）</span></div><p class="compact-card-conflict">报名已截止</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/ccf-blockchain-5-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://btc.ccf.org.cn/" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=ccf-blockchain-5-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="college-innovation-2026" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="team" data-discovery-registration="closed" data-discovery-submission="project" data-discovery-tags="创新创业|软件开发|AI 与机器学习" data-discovery-verification="discovery" data-search-text="中国国际大学生创新大赛 · 2026 中国国际大学生创新大赛 可申报软件与数字技术项目；2026 报名已于 9 月 25 日截止。 教育部通知公布 2026 年大赛安排与报名窗口；项目类别和材料要求以大赛章程、赛道通知及学校组织安排为准。 创新创业 软件开发 ai 与机器学习 产品原型 创新项目 创业计划 项目验证与团队路演" data-searchable="" data-sort-date="2026-09-25" data-sort-name="中国国际大学生创新大赛 · 2026 中国国际大学生创新大赛" data-sort-rank="50">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">创新创业</span><span class="discovery-tag">软件开发</span></div>
+<span class="directory-cycle-pill cycle-current">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/college-innovation-2026/index.html">2026 中国国际大学生创新大赛</a></h3>
+<p class="discovery-card-summary">可申报软件与数字技术项目；2026 报名已于 9 月 25 日截止。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件：</strong>打开本届赛事说明，确认参赛对象和适用赛道。</p>
+</details>
+<div class="compact-card-meta"><span data-testid="registration-window"><strong>报名截止：</strong>2026-09-25T12:00:00+08:00</span></div><p class="compact-card-conflict">报名已截止</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/college-innovation-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://www.moe.gov.cn/srcsite/A08/s5672/202607/t20260731_1445670.html" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=college-innovation-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="huawei-c4-ai-2026" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="unknown" data-discovery-registration="closed" data-discovery-submission="project" data-discovery-tags="AI 与机器学习|软件开发" data-discovery-verification="discovery" data-search-text="华为开发者大赛 c4-ai · 华为 c4-ai 大赛 2026 围绕 harmonyos、昇腾等生态开展 ai 应用开发；官网显示赛程已进入后续阶段。 华为官方页面列出 harmonyos 与 ascend 等方向，并显示初赛已完成、半决赛进行中；报名入口与本届材料细节以页面公告为准。 ai 与机器学习 软件开发 harmonyos ascend ai 应用 开发者 ai 应用开发与平台集成" data-searchable="" data-sort-date="" data-sort-name="华为开发者大赛 C4-AI · 华为 C4-AI 大赛 2026" data-sort-rank="50">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">AI 与机器学习</span><span class="discovery-tag">软件开发</span></div>
+<span class="directory-cycle-pill cycle-current">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/huawei-c4-ai-2026/index.html">华为开发者大赛 C4-AI · 华为 C4-AI 大赛 2026</a></h3>
+<p class="discovery-card-summary">围绕 HarmonyOS、昇腾等生态开展 AI 应用开发；官网显示赛程已进入后续阶段。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件研究：</strong>面向内地及港澳台高校在读学生，专科至博士、专业不限；可单人或最多3人组队，允许跨校/跨专业；导师须为队长所在高校正式教师。 <span class="basis-label basis-editorial">Research-only</span></p>
+</details>
+<p class="compact-card-conflict">报名已截止</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/huawei-c4-ai-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://developer.huawei.com/home/C4-AI" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=huawei-c4-ai-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="china-ai-competition-7-2026" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="team" data-discovery-registration="closed" data-discovery-submission="project" data-discovery-tags="AI 与机器学习|网络与安全|软件开发" data-discovery-verification="discovery" data-search-text="第七届中国人工智能大赛 · 2026年第七届 面向大模型、具身智能和智能体，团队完成技术赛、案例赛或真实场景任务；报名需审核通过。 官方公告列出10道赛题，围绕大模型、具身智能、智能体设置技术赛、案例赛和场景赛。已明确的例子包括：为指定模型搭建安全护栏并提供可访问接口；用微调或其它方法降低指定模型在测试题上的幻觉率；其它题目以竞赛平台发布内容为准。 ai 与机器学习 网络与安全 软件开发 大模型安全 幻觉治理 多模态安全 具身智能 ai agent 模型api 大模型安全攻防赛：提供可访问的模型防护接口 大模型幻觉挑战赛：在限定时间内提交模型回答，由主办方评估事实性 其它赛道的项目/api/案例材料按专用竞赛平台当届要求提交 大模型应用与接口服务 模型评测与数据处理 团队集成与演示" data-searchable="" data-sort-date="2026-10-18" data-sort-name="第七届中国人工智能大赛 · 2026年第七届" data-sort-rank="50">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">AI 与机器学习</span><span class="discovery-tag">网络与安全</span></div>
+<span class="directory-cycle-pill cycle-current">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/china-ai-competition-7-2026/index.html">第七届中国人工智能大赛 · 2026年第七届</a></h3>
+<p class="discovery-card-summary">面向大模型、具身智能和智能体，团队完成技术赛、案例赛或真实场景任务；报名需审核通过。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<div class="compact-card-meta"><span data-testid="registration-window"><strong>报名截止：</strong>2026-10-18</span></div><p class="compact-card-conflict">报名已截止</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/china-ai-competition-7-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://ai.xm.gov.cn/detail/article-detail.html?id=2026c40news0001" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=china-ai-competition-7-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="graduate-cybersecurity-innovation-5-2026" data-discovery-card="" data-discovery-cycle="current" data-discovery-format="team" data-discovery-registration="closed" data-discovery-submission="project" data-discovery-tags="网络与安全|软件开发|AI 与机器学习" data-discovery-verification="discovery" data-search-text="第五届中国研究生网络安全创新大赛 · 2026年第五届 研究生可参加揭榜挑战、创意作品或实网对抗；作品赛交安全方案/作品，实网赛考在线攻防。 官方邀请函设揭榜挑战赛、创意作品赛、实网对抗赛。揭榜与创意赛以作品创新为核心，创意方向包括密码学、系统安全、网络安全、应用安全、内容安全和智能安全；实网赛初赛为ctf夺旗，决赛含awd plus与靶场综合渗透。 网络与安全 软件开发 ai 与机器学习 网络安全 ctf awd plus 安全作品 系统安全 揭榜挑战/创意作品赛：按模板提交作品材料 实网对抗：在线初赛参赛；决赛按ctf、awd plus及靶场模块完成对抗 安全研究与方案设计 攻防实践 团队工程与文档表达" data-searchable="" data-sort-date="2026-10-18" data-sort-name="第五届中国研究生网络安全创新大赛 · 2026年第五届" data-sort-rank="50">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">网络与安全</span><span class="discovery-tag">软件开发</span></div>
+<span class="directory-cycle-pill cycle-current">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/graduate-cybersecurity-innovation-5-2026/index.html">第五届中国研究生网络安全创新大赛 · 2026年第五届</a></h3>
+<p class="discovery-card-summary">研究生可参加揭榜挑战、创意作品或实网对抗；作品赛交安全方案/作品，实网赛考在线攻防。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件研究：</strong>全国赛面向在读研究生及公告列明的本研贯通/已获研究生资格过渡身份；一般本科生不是已核实的普通参赛身份。1至4名同校队员、1名导师；不得跨校或跨培养单位。 <span class="basis-label basis-editorial">Research-only</span></p>
+</details>
+<div class="compact-card-meta"><span data-testid="registration-window"><strong>报名截止：</strong>2026-10-18T23:59:00+08:00</span></div><p class="compact-card-conflict">报名已截止</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/graduate-cybersecurity-innovation-5-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://cpipc.acge.org.cn/cw/contestNews/detail/2c90800c8093eef401809d33b36f0652/2c9080199ed8b78d019ed96ceea21560?page=1" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=graduate-cybersecurity-innovation-5-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="lanqiao-2027-18" data-discovery-card="" data-discovery-cycle="upcoming" data-discovery-format="individual" data-discovery-registration="open" data-discovery-submission="programming" data-discovery-tags="软件开发|编程与算法" data-discovery-verification="discovery" data-search-text="第十八届蓝桥杯软件赛 · 2027年第十八届 · 软件赛 官方来源对2026–2027周期届次编号存在第十七届/第十八届差异；当前记录身份和报名窗口待核实。 组委会第十八届通知列出的软件赛范围包括 c/c++、java、python、web、软件测试和网络安全；官方个人赛页面说明按所选科目参赛。尚未公布的软件科目题型和考核形式不作推断。 软件开发 编程与算法 c/c++ java python web 软件测试 网络安全 所选科目的语言或软件技术 独立读题、编码和调试" data-searchable="" data-sort-date="2026-12-18" data-sort-name="第十八届蓝桥杯软件赛 · 2027年第十八届 · 软件赛" data-sort-rank="50">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">软件开发</span><span class="discovery-tag">编程与算法</span></div>
+</div>
+<h3><a href="/competition-radar-site/discovery/lanqiao-2027-18/index.html">第十八届蓝桥杯软件赛 · 2027年第十八届 · 软件赛</a></h3>
+<p class="discovery-card-summary">官方来源对2026–2027周期届次编号存在第十七届/第十八届差异；当前记录身份和报名窗口待核实。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件：</strong>打开本届赛事说明，确认参赛对象和适用赛道。</p>
+</details>
+<div class="compact-card-meta"><span data-testid="registration-window"><strong>软件赛·省赛/全国选拔赛：</strong>2026-12-18 14:00（时区未说明）</span></div><p class="compact-card-conflict">届次来源表述不同，打开详情核对身份和年份。</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/lanqiao-2027-18/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://design.lanqiao.cn/news-detail/3090" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=lanqiao-2027-18">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="g6-1" data-discovery-card="" data-discovery-cycle="unknown" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="软件开发|编程与算法" data-discovery-verification="g6" data-search-text="第十八届蓝桥杯全国大学生软件和信息技术大赛 先核对届次，再按所选软件科目准备。 g6 本条保留为 2026 届记录。官网当前个人赛页面列有 c/c++、java、python、web、软件测试和网络安全等软件科目；若准备这条 2026 记录，须先用该届适用的赛规确认科目、考试形式和提交物。若你要参加官网当前的第十八届软件赛，请使用单独的 2027 周期记录和当前报名页，不要把该届日期带入本条。 软件开发 编程与算法 软件开发 编程练习 个人参赛 届次需核对 软件赛 官方来源对2026–2027周期届次编号存在第十七届/第十八届差异；当前记录身份和报名窗口待核实。 组委会第十八届通知列出的软件赛范围包括 c/c++、java、python、web、软件测试和网络安全；官方个人赛页面说明按所选科目参赛。尚未公布的软件科目题型和考核形式不作推断。 所选科目的语言或软件方向 独立读题、拆解任务并验证结果 调试与边界测试" data-searchable="" data-sort-date="" data-sort-name="第十八届蓝桥杯全国大学生软件和信息技术大赛" data-sort-rank="95">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">软件开发</span><span class="discovery-tag">编程与算法</span></div>
+</div>
+<h3><a href="/competition-radar-site/competitions/1/index.html">第十八届蓝桥杯全国大学生软件和信息技术大赛</a></h3>
+<p class="discovery-card-summary">先核对届次，再按所选软件科目准备。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件：</strong>查看已核实的参赛规则，再按个人情况核对。</p>
+</details>
+<p class="compact-card-conflict">届次来源表述不同，打开详情核对身份和年份。</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/competitions/1/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://due.xjtu.edu.cn/info/1172/10507.htm" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/discovery/lanqiao-2027-18/index.html">查看独立的第十八届线索 →</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=g6-1">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="ccf-open-source-innovation-8-2026" data-discovery-card="" data-discovery-cycle="unknown" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="software" data-discovery-tags="软件开发|计算机系统" data-discovery-verification="discovery" data-search-text="ccf开源创新大赛 · 第八届 ccf 开源创新大赛（2026） 面向开源项目实践的竞赛线索；本届报名和任务细则需查看官方平台。 ccf 官方启动文章确认第八届赛事开展；具体赛题、报名时段和交付物以比赛平台当届页面为准。 软件开发 计算机系统 开源工程 软件协作 项目贡献 阅读开源项目并参与协作" data-searchable="" data-sort-date="" data-sort-name="CCF开源创新大赛 · 第八届 CCF 开源创新大赛（2026）" data-sort-rank="67">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">软件开发</span><span class="discovery-tag">计算机系统</span></div>
+</div>
+<h3><a href="/competition-radar-site/discovery/ccf-open-source-innovation-8-2026/index.html">CCF开源创新大赛 · 第八届 CCF 开源创新大赛（2026）</a></h3>
+<p class="discovery-card-summary">面向开源项目实践的竞赛线索；本届报名和任务细则需查看官方平台。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件：</strong>打开本届赛事说明，确认参赛对象和适用赛道。</p>
+</details>
+<div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/ccf-open-source-innovation-8-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://www.ccf.org.cn/Chapters/DC/ODC/wyhdt/2026-03-23/865096.shtml" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=ccf-open-source-innovation-8-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="saikr-competition-656fc5b530" data-discovery-card="" data-discovery-cycle="unknown" data-discovery-format="unknown" data-discovery-registration="unknown" data-discovery-submission="unknown" data-discovery-tags="编程与算法" data-discovery-verification="lead" data-search-text="第五届全国大学生大数据分析技术技能大赛 · 聚合来源线索 · 待核实 赛氪聚合页收录。为深入贯彻落实习总书记对技能人才工作的系列重要指示，推进实施国家大数据战略，教育部高等学校统计学类专业教学 指导委员会、全国应用统计专业学位研究生教育指导委员会的共同指导下，中国科技新闻学会大数据专委会联合北京大数据协会决定启动第五届全国大学生大数据分析技术技能大赛。 大赛坚持开放、公平的办赛理念，创新大赛形式、提高大赛质量、推广大赛成果，实现以赛促学、以赛促教、以赛促建，推动建立健全多层次、多类型的大数据人才培养和评价体系。 根据大赛组委会颁布的《全国大学生大数据分析技术技能大赛章程》（【2022】01 号）和《第五届全国大学生大数据分析技术技能大赛规程》（【2026】01 号）等文件要求，现将大赛有关事项通知如下： 一、指导单位 聚合平台描述（未核验）：为深入贯彻落实习总书记对技能人才工作的系列重要指示，推进实施国家大数据战略，教育部高等学校统计学类专业教学 指导委员会、全国应用统计专业学位研究生教育指导委员会的共同指导下，中国科技新闻学会大数据专委会联合北京大数据协会决定启动第五届全国大学生大数据分析技术技能大赛。 大赛坚持开放、公平的办赛理念，创新大赛形式、提高大赛质量、推广大赛成果，实现以赛促学、以赛促教、以赛促建，推动建立健全多层次、多类型的大数据人才培养和评价体系。 根据大赛组委会颁布的《全国大学生大数据分析技术技能大赛章程》（【2022】01 号）和《第五届全国大学生大数据分析技术技能大赛规程》（【2026】01 号）等文件要求，现将大赛有关事项通知如下： 一、指导单位 编程与算法 算法 编程 数据分析 大数据" data-searchable="" data-sort-date="" data-sort-name="第五届全国大学生大数据分析技术技能大赛 · 聚合来源线索 · 待核实" data-sort-rank="25">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span></div>
+<span class="directory-cycle-pill cycle-unknown">有事项需确认</span> </div>
+<h3><a href="/competition-radar-site/discovery/saikr-competition-656fc5b530/index.html">第五届全国大学生大数据分析技术技能大赛 · 聚合来源线索 · 待核实</a></h3>
+<p class="discovery-card-summary">赛氪聚合页收录。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>待核验 · 目前仅有标题线索，不用于判断。</p>
+</details>
+<p class="compact-card-conflict">仅有赛事线索，先核对主办方本届公告</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/saikr-competition-656fc5b530/index.html">查看详情</a>
+<span class="compact-card-next-step">先从主办方官网找到本届赛事公告，再核对报名说明与对应赛道入口。</span><a class="text-link" href="/competition-radar-site/decision/index.html#compare=saikr-competition-656fc5b530">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="icpc-apac-championship-2026" data-discovery-card="" data-discovery-cycle="historical" data-discovery-format="team" data-discovery-registration="closed" data-discovery-submission="programming" data-discovery-tags="编程与算法" data-discovery-verification="discovery" data-search-text="icpc 亚洲太平洋地区总决赛 · 2026 icpc asia pacific championship 由区域赛晋级队伍参加的国际高校程序设计总决赛；2026 届已于 3 月结束。 官方信息称 70 支队伍从 2025 年八场区域赛中晋级参加 2026 年总决赛。该页面用于历史学习参考。 编程与算法 团队编程 国际赛 算法 竞赛平台中的程序解答" data-searchable="" data-sort-date="" data-sort-name="ICPC 亚洲太平洋地区总决赛 · 2026 ICPC Asia Pacific Championship" data-sort-rank="30">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span></div>
+<span class="directory-cycle-pill cycle-historical">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/icpc-apac-championship-2026/index.html">亚洲太平洋地区总决赛 · 2026 ICPC Asia Pacific Championship</a></h3>
+<p class="discovery-card-summary">由区域赛晋级队伍参加的国际高校程序设计总决赛；2026 届已于 3 月结束。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<p class="compact-card-conflict">报名已截止</p><p class="compact-card-conflict">往届赛事，适合参考任务与准备下一届</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/icpc-apac-championship-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://apac.icpc.global/championship/2026/information/" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=icpc-apac-championship-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="vivo-aigc-2026" data-discovery-card="" data-discovery-cycle="historical" data-discovery-format="unknown" data-discovery-registration="closed" data-discovery-submission="project" data-discovery-tags="AI 与机器学习|数字媒体" data-discovery-verification="discovery" data-search-text="vivo aigc 创新大赛 · 2026 vivo aigc 创新大赛 aigc 创意与应用赛事，2026 全国决赛和获奖结果已于 8 月发布。 赛事官方平台发布 2026 总决赛及获奖结果；具体赛道规则与材料须查看届次公告。 ai 与机器学习 数字媒体 aigc 数字创作 ai 应用" data-searchable="" data-sort-date="" data-sort-name="vivo AIGC 创新大赛 · 2026 vivo AIGC 创新大赛" data-sort-rank="30">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">AI 与机器学习</span><span class="discovery-tag">数字媒体</span></div>
+<span class="directory-cycle-pill cycle-historical">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/vivo-aigc-2026/index.html">AIGC 创新大赛 · 2026 vivo AIGC 创新大赛</a></h3>
+<p class="discovery-card-summary">AIGC 创意与应用赛事，2026 全国决赛和获奖结果已于 8 月发布。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<p class="compact-card-conflict">报名已截止</p><p class="compact-card-conflict">往届赛事，适合参考任务与准备下一届</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/vivo-aigc-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://aigc.vivo.com.cn/" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=vivo-aigc-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="service-outsourcing-17-2026" data-discovery-card="" data-discovery-cycle="historical" data-discovery-format="team" data-discovery-registration="closed" data-discovery-submission="project" data-discovery-tags="软件开发|创新创业|AI 与机器学习" data-discovery-verification="discovery" data-search-text="中国大学生服务外包创新创业大赛 · 第十七届中国大学生服务外包创新创业大赛（2026） 围绕企业命题开发软件或服务方案；2026 全国赛结果已公布。 大赛官方发布 2026 年全国赛获奖结果；企业命题按 a/b/c/d 类赛项和命题页区分。 软件开发 创新创业 ai 与机器学习 企业命题 项目开发 数据智能 按命题要求交付可验证方案" data-searchable="" data-sort-date="" data-sort-name="中国大学生服务外包创新创业大赛 · 第十七届中国大学生服务外包创新创业大赛（2026）" data-sort-rank="30">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">软件开发</span><span class="discovery-tag">创新创业</span></div>
+<span class="directory-cycle-pill cycle-historical">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/service-outsourcing-17-2026/index.html">第十七届中国大学生服务外包创新创业大赛（2026）</a></h3>
+<p class="discovery-card-summary">围绕企业命题开发软件或服务方案；2026 全国赛结果已公布。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<p class="compact-card-conflict">报名已截止</p><p class="compact-card-conflict">往届赛事，适合参考任务与准备下一届</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/service-outsourcing-17-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://fwwb.org.cn/" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=service-outsourcing-17-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="computer-design-19-2026" data-discovery-card="" data-discovery-cycle="historical" data-discovery-format="team" data-discovery-registration="closed" data-discovery-submission="project" data-discovery-tags="软件开发|数字媒体|AI 与机器学习" data-discovery-verification="discovery" data-search-text="中国大学生计算机设计大赛 · 2026 年第十九届中国大学生计算机设计大赛 覆盖软件应用、移动应用、ai 与数字作品等类别；2026 获奖公告已发布。 大赛规程涵盖软件应用与开发、移动应用等作品类别；作品主题和技术路线按类别要求确定。 软件开发 数字媒体 ai 与机器学习 软件应用 移动应用 人工智能 数字媒体 作品开发 按类别完成可运行作品" data-searchable="" data-sort-date="" data-sort-name="中国大学生计算机设计大赛 · 2026 年第十九届中国大学生计算机设计大赛" data-sort-rank="30">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">软件开发</span><span class="discovery-tag">数字媒体</span></div>
+<span class="directory-cycle-pill cycle-historical">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/computer-design-19-2026/index.html">2026 年第十九届中国大学生计算机设计大赛</a></h3>
+<p class="discovery-card-summary">覆盖软件应用、移动应用、AI 与数字作品等类别；2026 获奖公告已发布。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛条件研究：</strong>本届面向在籍本科生；团队2至9名同一院校本科生。国赛须由省级赛或规程认可赛区上推，不能直接报名国赛。 <span class="basis-label basis-editorial">Research-only</span></p>
+</details>
+<p class="compact-card-conflict">赛程依次为校赛、省赛、国赛。国赛作品须由省级赛事推荐；西北、中南、粤港澳等同等层级赛区也属于此途径。推荐对象限普通高校全日制本科学生的作品。</p><p class="compact-card-conflict">报名已截止</p><p class="compact-card-conflict">往届赛事，适合参考任务与准备下一届</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/computer-design-19-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://jsjds.blcu.edu.cn/info/1042/2294.htm" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=computer-design-19-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="computer-ladder-11-2026" data-discovery-card="" data-discovery-cycle="historical" data-discovery-format="team" data-discovery-registration="closed" data-discovery-submission="programming" data-discovery-tags="编程与算法" data-discovery-verification="discovery" data-search-text="中国高校计算机大赛—团体程序设计天梯赛 · 第十一届团体程序设计天梯赛（2026） 团队程序设计赛，覆盖常见数据结构与算法；2026 比赛已于 4 月举行。 高校公开通知确认 2026 年 4 月 18 日举办第十一届赛事；赛题范围涉及数据结构、动态规划、字符串、数论、图搜索与几何等。 编程与算法 数据结构 动态规划 图论 团队编程 竞赛系统中的程序解答 数据结构与算法实现" data-searchable="" data-sort-date="" data-sort-name="中国高校计算机大赛—团体程序设计天梯赛 · 第十一届团体程序设计天梯赛（2026）" data-sort-rank="30">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">编程与算法</span></div>
+<span class="directory-cycle-pill cycle-historical">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/computer-ladder-11-2026/index.html">中国高校计算机大赛—团体程序设计天梯赛 · 第十一届团体程序设计天梯赛（2026）</a></h3>
+<p class="discovery-card-summary">团队程序设计赛，覆盖常见数据结构与算法；2026 比赛已于 4 月举行。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<p class="compact-card-conflict">报名已截止</p><p class="compact-card-conflict">往届赛事，适合参考任务与准备下一届</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/computer-ladder-11-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://ccst.jlu.edu.cn/info/1056/20842.htm" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=computer-ladder-11-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="ciscn-19-2026" data-discovery-card="" data-discovery-cycle="historical" data-discovery-format="mixed" data-discovery-registration="closed" data-discovery-submission="project" data-discovery-tags="网络与安全" data-discovery-verification="discovery" data-search-text="全国大学生信息安全竞赛 · 第十九届全国大学生信息安全竞赛（2026） 包含信息安全竞赛活动；2026 主要决赛已于 8 月举行。 官方竞赛站分别列出信息安全竞赛与相关作品赛内容；本条保持为一个届次，不把不同活动拆成重复赛事。 网络与安全 信息安全 创新实践 网络攻防" data-searchable="" data-sort-date="" data-sort-name="全国大学生信息安全竞赛 · 第十九届全国大学生信息安全竞赛（2026）" data-sort-rank="30">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">网络与安全</span></div>
+<span class="directory-cycle-pill cycle-historical">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/ciscn-19-2026/index.html">第十九届全国大学生信息安全竞赛（2026）</a></h3>
+<p class="discovery-card-summary">包含信息安全竞赛活动；2026 主要决赛已于 8 月举行。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<p class="compact-card-conflict">报名已截止</p><p class="compact-card-conflict">往届赛事，适合参考任务与准备下一届</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/ciscn-19-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://www.ciscn.cn/competition/securityCompetition?compet_id=44" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=ciscn-19-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="embedded-chip-9-2026" data-discovery-card="" data-discovery-cycle="historical" data-discovery-format="team" data-discovery-registration="closed" data-discovery-submission="project" data-discovery-tags="计算机系统" data-discovery-verification="discovery" data-search-text="全国大学生嵌入式芯片与系统设计竞赛 · 2026 年第九届全国大学生嵌入式芯片与系统设计竞赛 面向嵌入式芯片与系统设计；2026 总决赛已于夏季举行。 组委会公告显示 2026 年赛事进入决赛和结果发布阶段；不同赛道任务按各自赛题执行。 计算机系统 嵌入式 芯片 系统设计" data-searchable="" data-sort-date="" data-sort-name="全国大学生嵌入式芯片与系统设计竞赛 · 2026 年第九届全国大学生嵌入式芯片与系统设计竞赛" data-sort-rank="30">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">计算机系统</span></div>
+<span class="directory-cycle-pill cycle-historical">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/embedded-chip-9-2026/index.html">2026 年第九届全国大学生嵌入式芯片与系统设计竞赛</a></h3>
+<p class="discovery-card-summary">面向嵌入式芯片与系统设计；2026 总决赛已于夏季举行。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<p class="compact-card-conflict">报名已截止</p><p class="compact-card-conflict">往届赛事，适合参考任务与准备下一届</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/embedded-chip-9-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://www.socchina.net/wx/inform?value=3" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=embedded-chip-9-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="computer-systems-2026" data-discovery-card="" data-discovery-cycle="historical" data-discovery-format="team" data-discovery-registration="closed" data-discovery-submission="software" data-discovery-tags="计算机系统" data-discovery-verification="discovery" data-search-text="全国大学生计算机系统能力大赛 · 2026 年全国大学生计算机系统能力大赛 覆盖操作系统、cpu、编译、数据库和智能计算等系统方向；2026 赛季已结束。 赛事官方站列出 cpu 设计、编译系统、操作系统、数据库系统、智能计算和智能系统等分赛项。具体任务与提交形式按分赛项公告。 计算机系统 操作系统 cpu 设计 编译系统 数据库 智能计算 选择一个系统方向深挖" data-searchable="" data-sort-date="" data-sort-name="全国大学生计算机系统能力大赛 · 2026 年全国大学生计算机系统能力大赛" data-sort-rank="30">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">计算机系统</span></div>
+<span class="directory-cycle-pill cycle-historical">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/computer-systems-2026/index.html">2026 年全国大学生计算机系统能力大赛</a></h3>
+<p class="discovery-card-summary">覆盖操作系统、CPU、编译、数据库和智能计算等系统方向；2026 赛季已结束。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<p class="compact-card-conflict">报名已截止</p><p class="compact-card-conflict">往届赛事，适合参考任务与准备下一届</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/computer-systems-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://pra.xtnl.org.cn/" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=computer-systems-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="software-innovation-19-2026" data-discovery-card="" data-discovery-cycle="historical" data-discovery-format="team" data-discovery-registration="closed" data-discovery-submission="project" data-discovery-tags="软件开发" data-discovery-verification="discovery" data-search-text="全国大学生软件创新大赛 · 第十九届全国大学生软件创新大赛（2026） 以软件设计与创新作品为核心；2026 全国决赛结果已公布。 组委会网站发布第十九届区域赛、全国赛入围及获奖结果；作品规则需按对应赛项通知核对。 软件开发 软件设计 项目开发 代码实现" data-searchable="" data-sort-date="" data-sort-name="全国大学生软件创新大赛 · 第十九届全国大学生软件创新大赛（2026）" data-sort-rank="30">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">软件开发</span></div>
+<span class="directory-cycle-pill cycle-historical">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/software-innovation-19-2026/index.html">第十九届全国大学生软件创新大赛（2026）</a></h3>
+<p class="discovery-card-summary">以软件设计与创新作品为核心；2026 全国决赛结果已公布。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<p class="compact-card-conflict">报名已截止</p><p class="compact-card-conflict">往届赛事，适合参考任务与准备下一届</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/software-innovation-19-2026/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://www.swcontest.com.cn/" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=software-innovation-19-2026">加入比较</a> </div>
+</li><li class="discovery-card discovery-compact-card" data-directory-id="huawei-ict-2025-26" data-discovery-card="" data-discovery-cycle="historical" data-discovery-format="mixed" data-discovery-registration="closed" data-discovery-submission="project" data-discovery-tags="计算机系统|网络与安全|AI 与机器学习" data-discovery-verification="discovery" data-search-text="华为 ict 大赛 · 华为 ict 大赛 2025–2026 中国赛季 覆盖网络、云、计算和创新等方向；2025–2026 赛季已结束。 华为官方赛季页面列出实践与创新等方向；具体题目和材料依赛道规则。 计算机系统 网络与安全 ai 与机器学习 网络 云 计算 ai ict 实践" data-searchable="" data-sort-date="" data-sort-name="华为 ICT 大赛 · 华为 ICT 大赛 2025–2026 中国赛季" data-sort-rank="30">
+<div class="compact-card-heading">
+<div class="compact-card-categories"><span class="discovery-tag">计算机系统</span><span class="discovery-tag">网络与安全</span></div>
+<span class="directory-cycle-pill cycle-historical">已截止</span> </div>
+<h3><a href="/competition-radar-site/discovery/huawei-ict-2025-26/index.html">ICT 大赛 · 华为 ICT 大赛 2025–2026 中国赛季</a></h3>
+<p class="discovery-card-summary">覆盖网络、云、计算和创新等方向；2025–2026 赛季已结束。</p>
+<details class="directory-conditions"><summary>参赛条件与适用范围</summary>
+<p class="discovery-card-summary" data-testid="eligibility-card-summary"><strong>参赛资格：</strong>适用范围有待研究 · 标题提示不构成限制。</p>
+</details>
+<p class="compact-card-conflict">报名已截止</p><p class="compact-card-conflict">往届赛事，适合参考任务与准备下一届</p> <div class="discovery-card-actions">
+<a class="compact-detail-link" href="/competition-radar-site/discovery/huawei-ict-2025-26/index.html">查看详情</a>
+<a class="text-link" data-testid="official-nav-link" href="https://www.huawei.com/cn/minisite/ict-competition-2025-2026-global/cn/index.html" rel="noopener noreferrer" target="_blank">查看官方赛事</a><a class="text-link" href="/competition-radar-site/decision/index.html#compare=huawei-ict-2025-26">加入比较</a> </div>
+</li> </ul>
+<noscript><p class="unknown-callout">当前浏览器关闭了 JavaScript；赛事仍可阅读，搜索和筛选不可用。</p></noscript>
+</section>
+<p class="directory-source-note"><a href="/competition-radar-site/system/index.html">查看资料来源、赛事身份与核对说明</a></p>
+</main>
+<footer class="site-footer discovery-footer">
+<p><a href="/competition-radar-site/system/index.html">查看资料来源、日期精度与核验范围</a></p>
+<details class="site-data-details">
+<summary>数据来源与隐私</summary>
+<p aria-label="PUBLIC_NO_PROFILE" class="run-chip">公开数据</p>
+<p>Legacy G6 数据截至 2026年10月14日 03:30:43（UTC）；Discovery 截至 2026-10-21；独立 Public-only 证据截至 2026-10-22。页面由静态公开 G6 制品生成（g151-public-20261014-e96e5cf1067a），并引用上述独立快照；本网站不读取私人 Profile，也不向外部发送个人输入。</p>
+<p>资格与准备输入只在当前页面内临时计算；刷新或离开后清除。报名状态、规则冲突和未知信息会按公开证据原样展示。</p>
+<p>数据范围：PUBLIC_NO_PROFILE。个人资格、团队组成与适配、可投入时间和获奖概率均未评估：NOT_EVALUATED。</p>
+<p><a href="/competition-radar-site/changes/index.html">公开数据变化</a> · <a href="/competition-radar-site/system/index.html">系统状态</a></p>
+</details>
+</footer>
+</body>
+</html>
