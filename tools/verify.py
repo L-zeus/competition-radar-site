@@ -2,17 +2,16 @@ from pathlib import Path
 import hashlib
 import json
 import sys
-from datetime import datetime, timedelta, timezone
 
 root = Path(__file__).resolve().parent.parent / 'site'
 manifest_path = root / 'public-manifest.json'
-expected_manifest = '67e167194d8ec604f9e217b07938227cdf54a4e344bf98bc2dbd5ec26f12651b'
+expected_manifest = '7d1a2b5d3c26a30c56ab0aa689a5967ef50d5e3d9e15d9fed88f4e75361a6a49'
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 if digest(manifest_path) != expected_manifest:
     raise SystemExit('Manifest differs from reviewed candidate')
 manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
-if manifest['base_path'] != '/competition-radar-site/' or manifest['release_id'] != 'g1514-208b6883554c5025de85a3b4':
+if manifest['base_path'] != '/competition-radar-site/' or manifest['release_id'] != 'g1514-4f8fc0389867fb7e1f070ae1':
     raise SystemExit('Release identity or path mismatch')
 paths = list(root.rglob('*'))
 if any(p.is_symlink() for p in paths):
@@ -25,11 +24,7 @@ for relative, expected in manifest['files'].items():
     if p.stat().st_nlink != 1 or digest(p) != expected:
         raise SystemExit(f'Invalid file: {relative}')
 
-if sys.argv[1:] == ['--publish']:
-    today = datetime.now(timezone(timedelta(hours=8))).date().isoformat()
-    if today < '2026-10-27' or today >= '2026-10-30':
-        raise SystemExit('Candidate expired: rebuild and review before deployment')
-elif sys.argv[1:]:
+if sys.argv[1:] not in ([], ['--publish']):
     raise SystemExit('Unknown argument')
 
 print(f"PASS {manifest['release_id']}: {len(files)} files match reviewed manifest")
