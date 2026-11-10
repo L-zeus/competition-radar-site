@@ -8,14 +8,14 @@ import sys
 
 root = Path(__file__).resolve().parent.parent / 'site'
 manifest_path = root / 'public-manifest.json'
-expected_manifest = '76fb99babfe963f932f7745996ca6dea9428708b122aa55807c9c4bef2686eeb'
+expected_manifest = '65a33ae27334346a3b5484359c6f61c789f689791395365fe65cc80ccd61d2c5'
 expected_temporal_gate = '0b21f0408fdca7f868bb5715f7fcb4d0bd70097438fb482155047c34c0a6aa3b'
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 if digest(manifest_path) != expected_manifest:
     raise SystemExit('Manifest differs from reviewed candidate')
 manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
-if manifest['base_path'] != '/competition-radar-site/' or manifest['release_id'] != 'g1514-68113e0f651647877c9fceb0':
+if manifest['base_path'] != '/competition-radar-site/' or manifest['release_id'] != 'g1514-2c7c66e82edfa19b1bce4428':
     raise SystemExit('Release identity or path mismatch')
 paths = list(root.rglob('*'))
 if any(p.is_symlink() for p in paths):
