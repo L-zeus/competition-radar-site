@@ -52,6 +52,17 @@ assert.equal(huawei.windows.find(row => row.window.scope.track_scope.includes('�
 assert.notEqual(huawei.windows.find(row => row.window.scope.track_scope.includes('创新')).state, 'ended');
 assert.equal(model.evaluateCompetition({important_dates:[{kind:'submission_deadline', date:'2026-11-06'}]}, at('2026-11-08T00:00:00Z')).registration, 'unknown');
 
+const qoder = event('qoder-campus-creativity-2026');
+assert.equal(qoder.layer, 'discovery');
+assert.equal(qoder.temporal_windows[0].closes, '2026-11-30T18:00');
+assert.equal(qoder.temporal_windows[0].timezone, 'UNKNOWN');
+assert.equal(model.evaluateCompetition(qoder, at('2026-11-29T12:00:00Z')).state, 'within');
+assert.equal(model.evaluateCompetition(qoder, at('2026-11-30T12:00:00Z')).state, 'boundary');
+assert.equal(model.evaluateCompetition(qoder, at('2026-12-02T12:00:00Z')).registration, 'closed');
+const ncccuFields = event('ncccu-8-2026').admitted_public_participation.fields;
+assert.equal(ncccuFields.find(row => row.claim_id === 'g1515-ncccu-program-subject-choice').active_for_decision, true);
+assert.equal(ncccuFields.find(row => row.claim_id === 'g1511-ncccu-8-2026-004-r1').review_status, 'SUPERSEDED');
+
 // The 14:00 date in G6 1 is scoped to a university notice. Without an
 // institution selection it cannot establish a national registration window.
 for (const date of ['2026-11-01T12:00:00Z', '2026-12-20T12:00:00Z']) {
