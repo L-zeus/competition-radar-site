@@ -81,3 +81,18 @@ const plan = engine.buildPlan([software], [software.id], software.id, profile).p
 assert.equal(plan.time.temporal.registration, 'closed');
 assert.match(plan.steps[0].title, /已报名者/);
 console.log('PASS published deadline, timezone, scope, conflict, recommendation, comparison and plan checks');
+
+// The full decision API retains explicit archival selections for historical
+// comparisons and preparation, while the default discovery/recommendation uses its current flag.
+assert.equal(recommended.time.temporal.current_opportunity, false);
+assert.equal(recommended.time.temporal.archived, true);
+assert.equal(model.evaluateCompetition(software, at('2026-10-29T12:00:00Z')).current_opportunity, true);
+assert.equal(model.evaluateCompetition(event('huawei-ict-11-2026-27'), at('2026-11-01T12:00:00Z')).archived, false);
+const expired = model.evaluateCompetition(event('ncccu-8-2026'), at('2026-12-01T12:00:00Z'));
+assert.equal(expired.archived, true);
+assert.equal(expired.windows.every(w => w.state === 'ended'), true);
+assert.equal(model.evaluateCompetition(event('ai-application-innovation-2-2026'), at('2026-11-17T12:00:00Z')).state, 'conflict');
+console.log('PASS current/archive selection and scoped post-registration access');
+for (const id of ['graduate-smart-city-12-2026', 'college-innovation-2026', 'graduate-cybersecurity-innovation-5-2026']) {
+  assert.equal(model.evaluateCompetition(event(id), at('2026-11-17T12:00:00Z')).archived, true, id + ': ISO :00 retains minute precision');
+}

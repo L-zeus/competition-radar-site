@@ -14,7 +14,11 @@
     ended: '按已公布期限已截止，请核验是否调整',
     conflict: '报名日期存在来源冲突，请核验',
     unknown: '报名时间待核验',
-    historical: '历史赛事，仅供参考',
+    historical: '历史届次，仅供参考',
+    superseded: '已有后继届次，本届已归档',
+    withdrawn: '官方已撤回本届公告',
+    'stale-unverified': '本届身份或来源已核实失效，资料仅供查阅',
+    archived: '本届已归档，仅供查阅',
     clock_error: '请核对设备日期，再判断报名时间'
   };
 
@@ -22,6 +26,7 @@
     if (typeof value !== 'string') return null;
     const m = /^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):(\d{2})(?::(\d{2})(?:\.\d+)?)?(Z|[+-]\d{2}:\d{2})?)?$/.exec(value);
     if (!m || !['date', 'minute', 'second', 'datetime'].includes(precision)) return null;
+    if (precision === 'date' && m[4] !== undefined || precision === 'minute' && Number(m[6] || 0) !== 0 || precision === 'second' && m[6] === undefined) return null;
     if (precision !== 'date' && m[4] === undefined) return null;
     const p = {y:+m[1], m:+m[2], d:+m[3], h:+(m[4] || 0), min:+(m[5] || 0), s:+(m[6] || 0), offset:m[7]};
     const t = Date.UTC(p.y, p.m - 1, p.d, p.h, p.min, p.s);
@@ -122,25 +127,31 @@
     const scope = windowScope(raw);
     if (options.track && scope.track_scope !== options.track && scope.track_id !== options.track) return false;
     if (options.stage && scope.stage !== options.stage) return false;
+    if (options.institution && scope.institution_id && scope.institution_id !== options.institution) return false;
     return true;
   }
   function isDateConflict(conflict, raw) {
     if (!conflict || typeof conflict !== 'object') return false;
     const semantic = String(conflict.semantic_field || conflict.semantic || '');
     const targets = conflict.value && conflict.value.target_claim_ids;
-    if (Array.isArray(targets) && raw && targets.includes(raw.claim_id)) return true;
+    if (Array.isArray(targets) && targets.length) return !!raw && targets.includes(raw.claim_id);
     if (!/registration.*(?:deadline|window)|(?:deadline|window).*registration/.test(semantic)) return false;
     const scope = windowScope(conflict), wscope = windowScope(raw);
+    if (scope.edition && wscope.edition && scope.edition !== wscope.edition) return false;
+    if (scope.institution_id && wscope.institution_id && scope.institution_id !== wscope.institution_id) return false;
     if (scope.stage && wscope.stage && scope.stage !== wscope.stage) return false;
     if (scope.track_scope && wscope.track_scope && scope.track_scope !== wscope.track_scope) return false;
     if (scope.track_id && wscope.track_id && scope.track_id !== wscope.track_id) return false;
     return true;
   }
-  function evaluateCompetition(event, now = Date.now(), options = {}) {
+  function evaluateRegistration(event, now, options) {
     if (!event || typeof event !== 'object') return {...result('unknown'), registration:'unknown', windows:[]};
     const ref = event.public_evidence_as_of || event.decision_as_of;
+    if (['historical', 'superseded', 'withdrawn', 'stale-unverified', 'archived'].includes(event.cycle_status)) {
+      const state = event.cycle_status;
+      return {...result(state), registration:state === 'stale-unverified' ? 'unknown' : 'closed', windows:[]};
+    }
     if (badClock(now, ref)) return {...result('clock_error'), registration:'unknown', windows:[]};
-    if (event.cycle_status === 'historical') return {...result('historical'), registration:'closed', windows:[]};
     const facts = event.admitted_public_participation || {};
     const admitted = Array.isArray(facts.registration_windows) ? facts.registration_windows : [];
     const sourceWindows = admitted.length ? admitted : (Array.isArray(event.temporal_windows) ? event.temporal_windows : []);
@@ -160,8 +171,9 @@
       scopeFacts.get(key).add(JSON.stringify([w.closes, w.precision || '', w.timezone || 'UNKNOWN']));
     }
     const windows = selected.map(w => ({window:w, ...evaluateWindow(w, now, {
-      referenceDate:ref, conflict:(scopeFacts.get(scopeKey(w))?.size || 0) > 1 || conflicts.some(c => isDateConflict(c, w))
+      referenceDate:ref, conflict:event.student_presentation?.date_review_pending === true || (scopeFacts.get(scopeKey(w))?.size || 0) > 1 || conflicts.some(c => isDateConflict(c, w))
     })}));
+    if (event.student_presentation?.date_review_pending === true) return {...result('conflict'), label:'官方时间正在复核', registration:'unknown', windows};
     let state;
     if (!windows.length) state = conflicts.some(c => isDateConflict(c, null)) && !options.track ? 'conflict' : 'unknown';
     else if (windows.some(w => w.state === 'within')) state = 'within';
@@ -177,5 +189,47 @@
     return {...overall, registration:state === 'within' ? 'open' : state === 'ended' ? 'closed' : 'unknown', windows};
   }
 
-  return {bounds, evaluateWindow, evaluateCompetition};
+  // Only scoped, sourced timeline facts may keep a post-registration task active.
+  // A later submission/exam is never evidence of permission to register.
+  function preparationNodes(event, now, options) {
+    const fields = (event?.admitted_public_participation?.fields || []).filter(f =>
+      f.active_for_decision !== false && f.semantic === 'participation.submission_deadline' && matches(f, options));
+    const facts = fields.map(f => ({kind:'submission_deadline', closes:f.value.closes,
+      precision:f.value.closes_precision, timezone:f.value.timezone, scope:f.scope, claim_id:f.claim_id}));
+    if (!options.track && !options.institution && !options.stage) {
+      for (const d of event?.important_dates || []) {
+        if (!d.exact || !['submission_deadline','exam_date','final_date','competition_end'].includes(d.kind) ||
+            facts.some(f => f.kind === d.kind)) continue;
+        facts.push({kind:d.kind, closes:d.date + (d.time ? 'T' + d.time : ''), precision:d.precision || (d.time ? 'datetime' : 'date'), timezone:d.timezone, scope:d.scope || {}});
+      }
+    }
+    return facts.map(window => ({window, ...evaluateWindow(window, now, {referenceDate:event.public_evidence_as_of || event.decision_as_of})}));
+  }
+
+  function evaluateCompetition(event, now = Date.now(), options = {}) {
+    const r = evaluateRegistration(event, now, options);
+    const terminal = ['historical','superseded','withdrawn','stale-unverified','archived'].includes(r.state);
+    const archived = terminal || r.state === 'ended';
+    const preparation = terminal ? [] : preparationNodes(event, now, options);
+    const preparing = preparation.some(w => ['upcoming','within'].includes(w.state));
+    const reason = archived ? (r.state === 'ended' ? '适用的已公布报名期限均已过' : r.label) : null;
+    const label = r.state === 'ended' && preparing ? r.label + '；已报名者仍有后续节点' : r.label;
+    return {...r, label, archived, archive_reason:reason, preparation,
+      lifecycle:r.state === 'ended' && preparing ? 'preparation-active' : r.state,
+      current_opportunity:!archived && event?.layer !== 'lead'};
+  }
+
+  // Multiple pages subscribe, but use one visible-page clock and refresh on return.
+  const subscribers = new Set();
+  function onClockChange(callback) {
+    if (!subscribers.size) {
+      const refresh = () => { if (!document.hidden) subscribers.forEach(fn => fn()); };
+      window.addEventListener('focus', refresh);
+      window.addEventListener('pageshow', refresh);
+      document.addEventListener('visibilitychange', refresh);
+      window.setInterval(refresh, 60000);
+    }
+    subscribers.add(callback);
+  }
+  return {bounds, evaluateWindow, evaluateCompetition, onClockChange};
 });
